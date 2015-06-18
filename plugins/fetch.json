@@ -1,0 +1,15 @@
+{
+    "org.apache.cordova.splashscreen": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.splashscreen"
+        }
+    },
+    "me.apla.cordova.app-preferences": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/apla/me.apla.cordova.app-preferences",
+            "subdir": "."
+        }
+    }
+}

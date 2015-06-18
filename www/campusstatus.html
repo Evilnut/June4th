@@ -1,0 +1,262 @@
+
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<!--<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left sliding">
+			<a href="sfuindex.html" class="back link" data-force="true"><i class="icon icon-back"></i></a>
+		</div>
+		<div class="center sliding">Compus Status</div>
+
+	</div>
+</div>-->
+
+
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left sliding">
+            <a href="sfuindex.html" class="back link"><i class="icon icon-back"></i></a>
+        </div>
+        <div class="center sliding">Compus Status</div>
+
+    </div>
+</div>
+
+<div class="pages">
+<!-- Page, data-page contains page name-->
+	<div data-page="campusStatus" class="page">
+	<!-- Scrollable page content-->
+		<div  id="pullToRefreshCampusStatus" class="page-content pull-to-refresh-content">
+			<!-- pull to refresh-->
+			<div class="pull-to-refresh-layer">
+				<div class="preloader"></div>
+				<div class="pull-to-refresh-arrow"></div>
+			</div>
+			<!-- Burnaby -->
+			<div class="content-block-title">Burnaby</div>
+			<div class="list-block with-border">
+				<ul>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-status"></i></div>
+						<div class="item-inner">
+							<div class="item-title"><span class="strStatus"></span></div>
+							<div class="item-after"><span class="badge bg-green" id="burStatus"><span class="strNoInternet"></span></span></div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-therm"></i></div>
+						<div class="item-inner">
+							<div class="item-title" id="burnabyDeg"><span class="strWeather"></span></div>
+							
+							<div class="item-after">
+								
+								<i class="icon icon-weather" id="burnabyIcon"></i>
+							</div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-class"></i></div>
+						<div class="item-inner">
+							<div class="item-title"><span class="strClass"></span></div>
+							<div class="item-after"><span id = "burExam"></span></div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-bus"></i></div>
+						<div class="item-inner">
+							<div class="item-title"><span class="strBus"></span></div>
+							<div class="item-after"><span id = "busCon"></span></div>
+						</div>
+					</li>					
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-road"></i></div>
+						<div class="item-inner">
+							<div class="item-title"><span class="strRoad"></span></div>
+							<div class="item-after"><span id = "roadCon"></span></div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-com"></i></div>
+						<div class="item-inner">
+							<div class="item-title"><span class="strComputers"></span></div>
+							<a href="#" data-popup=".popup-burnaby" class="open-popup">
+								<div class="item-after" id="benComputer" style="display:inline">
+									<span class="strUnknown"></span>
+								</div><i class="icon icon-clickarrow" ></i>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--_________________________________________ Surrey _______________________________________________-->
+			<div class="content-block-title">Surrey</div>
+			<div class="list-block with-border">
+				<ul>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-status"></i></div>
+						<div class="item-inner">
+							<div class="item-title"><span class="strStatus"></span></div>
+							<div class="item-after"><span class="badge bg-green" id="surStatus"></span></div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-therm"></i></div>
+						<div class="item-inner">
+							<div class="item-title" id="surreyDeg"><span class="strWeather"></span></div>
+							
+							<div class="item-after"><i class="icon icon-weather" id="surreyIcon"></i></div>
+					</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-class"></i></div>
+						<div class="item-inner">
+							<div class="item-title"><span class="strClass"></span></div>
+							<div class="item-after"><span id = "surExam"></span></div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-com"></i></div>
+						<div class="item-inner">
+				
+							<div class="item-title"><span class="strComputers"></span></div>
+						<a href="#" data-popup=".popup-surrey" class="open-popup">
+							<div class="item-after"  id="surComputer" style="display:inline"><span class="strUnknown"></span></div>
+							<i class="icon icon-clickarrow" ></i>
+						</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--_________________________________________ Downtown _______________________________________________-->
+			<div class="content-block-title">Downtown</div>
+			<div class="list-block with-border">
+				<ul>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-status"></i></div>
+						<div class="item-inner">
+							<div class="item-title"><span class="strStatus"></span></div>
+							<div class="item-after"><span class="badge bg-green" id="dtStatus"></span></div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-therm"></i></div>
+						<div class="item-inner">
+							<div class="item-title" id="downtownDeg"><span class="strWeather"></span></div>
+							
+							<div class="item-after" ><i class="icon icon-weather" id="downtownIcon"></i></div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-class"></i></div>
+						<div class="item-inner">
+							<div class="item-title"><span class="strClass"></span></div>
+							<div class="item-after"><span id = "dtExam"></span></div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-com"></i></div>
+						<div class="item-inner">
+							<div class="item-title"><span class="strComputers"></span></div>
+							<div class="item-after" id="belComputer" style="display:inline"><span class="strUnknown"></span></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+<!--__________________________________________________________________________________________________-->
+
+<div class="popup popup-burnaby">
+	<div class="content-block">
+        <p><a href="#" class="close-popup">Close popup</a></p>
+        <div>
+        	<div class="content-block-title"><span class="strBurnabyLib"></span></div>
+			<div class="list-block with-border">
+				<ul>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-com"></i></div>
+						<div class="item-inner">
+							<div class="item-title"><span class="strbenCom2"></span></div>
+							<div class="item-after" id="benComputer2"></div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-com"></i></div>
+						<div class="item-inner">
+							<div class="item-title"><span class="strbenComWest3"></span></div>
+							<div class="item-after" id="benComputerWest3"></div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-com"></i></div>
+						<div class="item-inner">
+							<div class="item-title"><span class="strbenComEast3"></span></div>
+							<div class="item-after" id="benComputerEast3"></div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-com"></i></div>
+						<div class="item-inner">
+							<div class="item-title"><span class="strbenMac3"></span></div>
+							<div class="item-after" id="benMac"></div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-com"></i></div>
+						<div class="item-inner">
+							<div class="item-title"><span class="strbenCom4"></span></div>
+							<div class="item-after" id="benComputer4"></div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-com"></i></div>
+						<div class="item-inner">
+							<div class="item-title"><span class="strbenCom5"></span></div>
+							<div class="item-after" id="benComputer5"></div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-com"></i></div>
+						<div class="item-inner">
+							<div class="item-title"><span class="strbenCom6"></span></div>
+							<div class="item-after" id="benComputer6"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+    	</div>
+  	</div>
+</div>
+
+<div class="popup popup-surrey">
+	<div class="content-block">
+        <p></p>
+        <p><a href="#" class="close-popup">Close popup</a></p>
+        <div>
+        	<div class="content-block-title"><span class="strSurreyLib"></span></div>
+			<div class="list-block with-border">
+				<ul>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-com"></i></div>
+						<div class="item-inner">
+							<div class="item-title"><span class="strSurComputers"></span></div>
+							<div class="item-after" id="surPc"></div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="icon icon-com"></i></div>
+						<div class="item-inner">
+							<div class="item-title"><span class="strSurMacs"></span></div>
+							<div class="item-after" id="surMac"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+    	</div>
+  	</div>
+</div>
+
+
+
+<!--__________________________________________________________________________________________________-->
+		</div>
+	</div>
+</div>

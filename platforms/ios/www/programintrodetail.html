@@ -1,0 +1,44 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left sliding">
+			<a href="programintro.html" class="back link"><i class="icon icon-back"></i></a>
+		</div>
+		<div class="center sliding">{{program_name}}</div>
+	</div>
+</div>
+
+<div class="pages">
+	<div class="page program-page page-on-center" data-page="programIntroDetail" data-prof-id="{{id}}">
+		<div class="page-content">
+			<div class="program-header">
+				<div class="program-title">{{program_name}}</div>
+				<div class="program-info">{{faculty}}</div>
+			</div>
+			<div class="program-comments">
+				<div class="messages">
+					<div class="message message-received message-with-tail message-last">
+						<div class="message-name">
+							<span class="comment-name"><span class="strProgramIntro"></span></span>
+						</div>
+						<div class="message-text">
+							<p>{{program_intro}}</p>
+						</div>
+					</div>
+					<div class="message message-received message-with-tail message-last">
+						<div class="message-name">
+							<span class="comment-name"><span class="strCareer"></span></span>
+						</div>
+						<div class="message-text"> 
+							<p>{{career}}</p>
+						</div>
+					</div>
+					<div class="message message-received message-with-tail message-last">
+						<a href="programintromore.html?url={{link}}">
+							<p style="margin-left:20px;color:blue !important;">More Information</p>
+						</a>
+					</div>
+				</div>   
+			</div>
+		</div>
+	</div>
+</div>

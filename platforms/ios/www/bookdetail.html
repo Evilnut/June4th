@@ -1,0 +1,51 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left sliding">
+			<a href="booklist.html" class="back link"><i class="icon icon-back"></i></a>
+		</div>
+		<div class="center sliding" style="font-weight:bold;text-transform:uppercase">{{Name}}</div>
+	</div>
+</div>
+
+<div class="pages">
+	<div class="page book-page page-on-center" data-page="bookDetail" data-prof-id="{{id}}">
+		<div class="page-content">
+			<div class="book-header">
+				<div class="book-seller"><strong>Book Seller: </strong>{{Seller}}</div>
+				<div class="book-info">
+				<p><strong>Book Author: </strong>{{Author}}</p>
+				<p><strong>Book Edition: </strong>{{Edition}}</p>
+				</div>
+				
+			</div>
+			<div class="book-comments">
+				<div class="messages">
+					<div class="message message-received message-with-tail message-last">
+						<div class="message-name">
+							<span class="comment-name"><span class="strBookImg">Image</span></span>
+						</div>
+						<div class="img-data">
+							<img src="http://evilnut.ca/App/APIs/sfu_app/sfuapp/sql/showimage.php?id={{ID}}" width = "250" height = "250">
+						</div>
+					</div>
+					<div class="message message-received message-with-tail message-last">
+						<div class="message-name">
+							<span class="comment-name"><span class="strBookDesc">Description</span></span>
+						</div>
+						<div class="message-text"> 
+							<p>{{Description}}</p>
+						</div>
+					</div>
+				</div>
+				<div class="message">
+					<div class="info-text">
+ 						<p><strong>Email: </strong><a href="mailto:{{Email}}" style="color:blue">{{Email}}</a></p>
+      					<p><strong>Phone: </strong><a href="tel:{{Telephone}}" style="color:blue">{{Telephone}}</a></p>
+						<p><strong>Original Price: </strong>{{OriginalPrice}}</p>
+						<p><strong>Current Price: </strong>{{CurrentPrice}}</p>
+					</div>
+				</div>   
+			</div>
+		</div>
+	</div>
+</div>

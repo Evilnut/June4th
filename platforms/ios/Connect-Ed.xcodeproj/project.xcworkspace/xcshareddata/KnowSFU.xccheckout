@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>01814B4B-8F4C-4FFA-A09C-88E2FA6CD9C6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>KnowSFU</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0BBCBC862C229553EF3FCA77A7DB1F4C6B63FA57</key>
+		<string>https://github.com/Evilnut/sfuApp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>trunk/sfuapp/platforms/ios/KnowSFU.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0BBCBC862C229553EF3FCA77A7DB1F4C6B63FA57</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Evilnut/sfuApp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0BBCBC862C229553EF3FCA77A7DB1F4C6B63FA57</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0BBCBC862C229553EF3FCA77A7DB1F4C6B63FA57</string>
+			<key>IDESourceControlWCCName</key>
+			<string>sfuApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>

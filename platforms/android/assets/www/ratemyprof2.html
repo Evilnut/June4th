@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Connect-ED</title>
+
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.min.css">
+    <link rel="stylesheet" href="css/ionicons.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+    <script type="text/javascript" src="js/menubar.js"></script>
+
+   <!-- script and css for pagination-->
+
+    <script src="./js/jquery-1.7.2.min.js"></script>
+    <script src="./js/jquery.jqpagination.js"></script>
+    <script src="./js/scripts.js"></script>
+
+    <!-- generic demo style -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/demo.css" />
+
+    <!-- jqPagination styles -->
+    <link rel="stylesheet" href="./css/jqpagination.css" />
+
+
+
+
+
+</head>
+<body>
+
+
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left sliding">
+            <a href="sfuindex.html" class="back link"><i class="icon icon-back"></i></a>
+        </div>
+        <div class="center sliding">Rate My Prof</div>
+
+    </div>
+</div>
+
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div class="page profs-list page-on-center" data-page="rateMyProf">
+        <form class="searchbar" data-search-list="#profSearchList" data-search-in="#profTitle" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">
+            <div class="searchbar-input">
+                <input type="search" placeholder="Search"/>
+                <a href="#" class="searchbar-clear"></a>
+            </div>
+            <a href="#" class="searchbar-cancel"><span class="strCancel"></span></a>
+        </form>
+        <!-- Scrollable page content-->
+        <div id="pullToRefreshProf" class="page-content pull-to-refresh-content">
+            <!-- pull to refresh-->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+
+            <!-- Search bar overlay-->
+            <div class="searchbar-overlay"></div>
+
+            <!-- This block will be displayed if nothing found -->
+            <div class="content-block searchbar-not-found">
+                <div class="content-block-inner"><span class="strNothingfound"></span></div>
+            </div>
+
+            <!-- This block will be displayed if anything found, and this list block is used a searbar target -->
+            <div>
+                <div id="profSearchList" class="list-block media-list searchbar-found" >
+
+                </div>
+                <div class="pagination">
+                    <a href="#" class="first" data-action="first">&laquo;</a>
+                    <a href="#" class="previous" data-action="previous">&lsaquo;</a>
+                    <input type="text" readonly="readonly" data-max-page="40" />
+                    <a href="#" class="next" data-action="next">&rsaquo;</a>
+                    <a href="#" class="last" data-action="last">&raquo;</a>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

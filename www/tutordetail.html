@@ -1,0 +1,52 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left sliding">
+			<a href="tutorlist.html" class="back link"><i class="icon icon-back"></i></a>
+		</div>
+		<div class="center sliding" style="font-weight:bold;text-transform:uppercase">{{Course}}</div>
+	</div>
+</div>
+
+<div class="pages">
+	<div class="page tutor-page page-on-center" data-page="tutorDetail" data-prof-id="{{id}}">
+		<div class="page-content">
+			<div class="tutor-header">
+				<div class="tutor-name"><strong>Tutor Name: </strong>{{Name}}</div>
+			</div>
+			<div class="tutor-comments">
+				<div class="message">
+					<div class="message message-received message-with-tail message-last">
+						<div class="message-name">
+							<span class="comment-name"><span class="strTutorialDesc">More Info</span></span>
+						</div>
+						<div class="message-text"> 
+							<p>{{Description}}</p>
+						</div>
+					</div>
+				</div>   
+				<div class="message">
+					<div class="message message-received message-with-tail message-last">
+						<div class="message-name">
+							<span class="comment-name"><span class="strContact">Contact</span></span>
+						</div>
+						<div class="contact-text"> 
+ 							<p><strong>Email: </strong><a href="mailto:{{Email}}" style="color:blue">{{Email}}</a></p>
+      						<p><strong>Phone: </strong><a href="tel:{{Telephone}}" style="color:blue">{{Telephone}}</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="message">
+					<div class="message message-received message-with-tail message-last">
+						<div class="message-name">
+							<span class="comment-name"><span class="strContact">Date</span></span>
+						</div>
+						<div class="date-text"> 
+ 							<p><strong>Posted on: </strong>{{Timestamp}}</a></p>
+ 						</div>	
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>

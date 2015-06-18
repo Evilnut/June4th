@@ -1,0 +1,121 @@
+
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Connect-ED</title>
+
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.min.css">
+    <link rel="stylesheet" href="css/ionicons.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+    <script type="text/javascript" src="js/menubar.js"></script>
+
+</head>
+<body>
+
+
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left sliding">
+			<a href="sfuindex.html" class="back link"><i class="icon icon-back"></i></a>
+		</div>
+		<div class="center sliding" style="margin-left:-20px;">Settings</div>
+	</div>
+</div>
+
+<div class="pages">
+<!-- Page, data-page contains page name-->
+	<div data-page="settingPage" class="page">
+	<!-- Scrollable page content-->
+		<div class="page-content">
+			<div class="setting-page list-block">
+				<ul class="">
+					<li>
+						<div class="item-content">
+							<div class="item-inner user-info">
+								<div class="avatar">
+									<img alt="" src="img/avatar/avatar04.jpg">
+								</div>
+								<div class="user-detail">
+									<div class="name"><span class="strName"></span><span id="studentName"></span></div>
+									<div class="point"><span class="strStudentNum"></span><span id="studentID"></span></div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- <li>
+						<a class="item-link" href="index.html">
+							<div class="item-content">
+								<div class="item-media feedback spring"></div>
+								<div class="item-inner">
+									<div class="item-title"><span class="strUnknown"></span></div>
+								</div>
+							</div>
+						</a>
+					</li> -->
+					
+					<!-- <li>
+						<a class="item-link" href="index.html">
+							<div class="item-content">
+								<div class="item-media feedback spring"></div>
+								<div class="item-inner">
+									<div class="item-title"><span class="strUnknown"></span></div>
+								</div>
+							</div>
+						</a>
+					</li> -->
+					
+					
+					<li>
+						<a class="update-button item-link" href="#">
+							<div class="item-content">
+								<div class="item-media update spring"></div>
+								<div class="item-inner">
+									<div class="item-title"><span class="strUpdate"></span></div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="item-link" href="language.html">
+							<div class="item-content">
+								<div class="item-media language">
+									<!--<i class="icon ios7-world-outline"></i>-->
+								</div>
+								<div class="item-inner">
+									<div class="item-title"><span class="strLanguage"></span></div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="item-link" href="about.html">
+							<div class="item-content">
+								<div class="item-media about spring">
+
+                                </div>
+									<div class="item-inner">
+									<div class="item-title"><span class="strAbout"></span></div>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<a id="loginBtn" class="button button-big logout-button button-fill color-green open-login-screen" href="#"><span class="strLogin"></span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

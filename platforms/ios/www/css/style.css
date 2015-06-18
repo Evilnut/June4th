@@ -1,0 +1,1944 @@
+
+/*======================== Global style  =============================*/
+.list-block ul {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+	list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.list-block li {
+    box-sizing: border-box;
+    position: relative;
+}
+
+.list-block .item-content {
+    box-sizing: border-box;
+    min-height: 44px;
+    padding-left: 15px;
+}
+
+
+
+i.ks-tabbar-icon-1 {
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/index/new/home.png");
+  margin:0 auto;
+  
+}
+.active i.ks-tabbar-icon-1 {
+  background-image: url("../img/index/new/home.png");
+}
+i.ks-tabbar-icon-3 {
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/index/new/myAccount.png");
+  margin:0 auto;
+}
+.active i.ks-tabbar-icon-3 {
+  background-image: url("../img/index/new/myAccount.png");
+
+}
+
+i.ks-tabbar-icon-2 {
+  width: 38px;
+  height: 38px;
+  background-image: url("../img/index/new/schedule2.png");
+  margin:0 auto;
+  background-size: 120%;
+    margin-top: 7px;
+
+}
+.active i.ks-tabbar-icon-2 {
+  background-image: url("../img/index/new/schedule2.png");
+  background-size: 120%;
+}
+
+i.ks-tabbar-icon-4 {
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/index/new/news.png");
+  margin:0 auto;
+}
+.active i.ks-tabbar-icon-4 {
+  background-image: url("../img/index/new/news.png");
+
+}
+
+
+i.ks-tabbar-icon-5 {
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/index/new/transit.png");
+  margin:0 auto;
+}
+.active i.ks-tabbar-icon-5 {
+  background-image: url("../img/index/new/transit.png");
+
+}
+
+.toolbar {
+    background: none repeat scroll 0 0 #9d9d9d;
+/*    background:-moz-linear-gradient(left,  	 	#007aff,#5ac8fa);
+    background:-webkit-gradient(linear, left top, right top, from(#007aff), to(#5ac8fa));*/
+
+    box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.1);
+
+  /*  filter: url(blur.svg#blur);
+     -webkit-filter: blur(10px);
+       -moz-filter: blur(10px);
+        -ms-filter: blur(10px);
+            filter: blur(10px);
+
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false);
+    */
+}
+
+
+
+/*--------------------title bar format setting ------------------------------------*/
+ #indexBack {
+ 	text-align: center;
+ 	width:20%; 
+ 	margin:0px auto; 
+ 	border-stype: thick transparent;
+ 	border-bottom: 4px;
+ 	}
+ #scheduleBack {
+ 	text-align: center; 
+ 	width:20%;
+ 	margin:0px auto; 
+	border: thick transparent gray;
+ 	}
+ #accountBack{
+ 	text-align: center; 
+ 	width:20%;
+ 	margin:0px auto; 
+  	border: thick transparent gray;
+ 	}
+ #newsBack{
+ 	text-align: center; 
+ 	width:20%;
+ 	margin:0px auto; 
+	border: thick transparent gray;
+ 	}
+ #transitBack{
+ 	text-align: center; 
+ 	width:20%; 
+ 	margin:0px auto; 
+	border: thick transparent gray;
+ }
+ #Div5{
+     font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+     font-size:20px ;
+     text-align: center;
+     padding-top: 15px;
+ }
+
+#courseSearchBtn{
+    background: transparent;
+    border: none;
+    font-size: 15px;
+ }
+
+a.click {
+    text:yellow;
+}
+
+
+
+
+/*-------------------------------------------------------------------*/
+i.icon.icon-weather {
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/i-rain.png");
+}
+
+i.icon.icon-train {
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/i-train.png");
+}
+
+i.icon.icon-class {
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/i-class.png");
+}
+
+i.icon.icon-road {
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/i-road.png");
+}
+
+i.icon.icon-bus {
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/i-bus.png");
+}
+
+i.icon.icon-com {
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/i-com.png");
+}
+
+i.icon.icon-status {
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/i-status.png");
+}
+
+i.icon.icon-pc {
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/i-pc.png");
+}
+
+i.icon.icon-mac {
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/i-mac.png");
+}
+
+i.icon.icon-therm {
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/i-thermometer.png");
+}
+
+
+i.icon.icon-term {
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/coursesearch/term.png");
+}
+
+i.icon.icon-subject {
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/coursesearch/subject.png");
+}
+
+i.icon.icon-number {
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/coursesearch/number.png");
+}
+
+i.icon.icon-campus {
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/coursesearch/campus.png");
+}
+i.icon.icon-clickarrow {
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/clickarrow.png");
+}
+
+i.icon.icon-back {
+  width: 30px;
+  height: 20px;
+  background-image: url("../img/back3.png");
+}
+
+i.icon.index-back-icon {
+  width: 50px;
+  height: 40px;
+  background-image: url("../img/index/arrow.png");
+}
+
+i.icon.icon-cs {
+  width:48px;
+  height:48px;
+  clear:both;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  background-image: url("../img/index/campus_status_f.png");
+}
+
+i.icon.icon-canvas{
+    width: 48px;
+  height: 48px;
+  background-image: url("../img/canvas.png");
+}
+i.icon.icon-connect{
+    width: 48px;
+  height: 48px;
+  background-image: url("../img/connect.png");
+}
+i.icon.icon-sis{
+    width: 48px;
+  height: 48px;
+  background-image: url("../img/sis.png");
+}
+i.icon.icon-loncapa{
+    width: 48px;
+  height: 48px;
+  background-image: url("../img/loncapa.png");
+}
+
+
+
+.spring {
+    background: url("../img/sprite@2x.png") no-repeat scroll 0 0 / 200% auto rgba(0, 0, 0, 0);
+}
+
+/*================================= index page =================================*/
+.navbar-extra {
+	/*background: none repeat scroll 0 0 #007aff;*/
+	box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-bottom: medium none;
+	height: 75px;
+	background-color: #f44336;
+/*	background:-moz-linear-gradient(left,  	 	#007aff,#5ac8fa);
+    background:-webkit-gradient(linear, left top, right top, from(#007aff), to(#5ac8fa));*/
+}
+
+.navbar {
+    color: white;
+/*	background:-moz-linear-gradient(left,  	 	#007aff,#5ac8fa);
+    background:-webkit-gradient(linear, left top, right top, from(#007aff), to(#5ac8fa));*/
+    background-color: #f44336;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-bottom: medium none;
+}
+
+.navbar .center {
+	/* line-height: 20px; */
+	display: block;
+
+
+}
+
+.navbar .left {
+	display: block;
+
+}
+
+.navbar .right {
+	display: block;
+	margin-left: 0px;
+	width: 23%;
+}
+
+a.link.nav{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: space-between;
+	padding-bottom: 4px;
+	padding-top: 4px;
+	-moz-box-orient: vertical;
+	align-items: center;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+	overflow: visible;
+	width: 100%;
+	color:#308ee6;
+}
+
+
+
+
+.index-page .page-content {
+ 	margin-top:12px;
+    background-color: white;
+
+
+}
+
+
+#main .list-block {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+div[class*="col-"] {
+/*   background:  #efeff4; */
+  text-align: center;
+  color: #000;
+
+  padding: 5px;
+
+  min-height:95px;
+}
+
+.row {
+  margin-bottom: 0px;
+  width:100%;
+}
+.row div{
+
+  /*text-align: left;*/
+}
+.row .col-icon {
+    min-width: 50%;
+    
+
+}
+
+.strpanel {
+margin-right: 15%;
+margin-top: 7%;
+color:white;
+font-size: 20px;
+}
+
+.col-icon > a > img {
+
+  height: 120px;
+}
+
+.row .col-icon {
+  /*width: calc((100% - 1px * 1) / 3);*/
+    width: 50%;
+    border-top: none;
+    border-left: none;
+}
+
+
+.row .col-icon div {
+
+  width: 80%;
+/* 	font-size:125%; */
+  text-align: left;
+}
+
+
+.row .col-icon .col-name2 {
+	margin-left:-60px;
+}
+
+.row .col-icon .col-name3 {
+	top: 260px;
+}
+
+.row .col-icon .col-name4 {
+	top: 260px;
+	margin-left:-60px;
+}
+
+.row .col-icon img {
+	margin-top:10px;
+	height:70%;
+	width:60%;
+	float:center;
+	clear:both;
+}
+
+#stretch
+{
+-moz-border-image:url(../img/border.png) 3 3  stretch;	/* Old Firefox */
+-webkit-border-image:url(../img/border.png) 3 3  stretch;	/* Safari and Chrome */
+-o-border-image:url(../img/border.png) 3 3  stretch;		/* Opera */
+border-image:url(../img/border.png) 3 3  stretch;
+}
+
+
+#campusMap, #map-canvas { width: 100%; min-height: 789px; padding: 0; position: absolute; }
+
+a {
+    color: white;
+}
+
+
+
+.strCourseSchedule {
+    left: -50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+row
+
+
+
+
+
+/*================================= setting page =================================*/
+.setting-page.list-block, .item-detail {
+    margin: 0 5px 15px;
+}
+
+.setting-page.list-block li {
+    box-sizing: border-box;
+    position: relative;
+}
+
+.setting-page.list-block .item-content {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    min-height: 44px;
+    padding-left: 15px;
+}
+
+.setting-page .item-content {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #ebe9e9;
+    box-shadow: none;
+    color: #6d6d72;
+    margin: 10px 0 0;
+    padding: 0 0 0 10px;
+}
+
+.list-block .item-inner {
+    align-items: center;
+    border-bottom: 1px solid #c8c7cc;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    min-height: 44px;
+    padding-bottom: 7px;
+    padding-right: 15px;
+    padding-top: 8px;
+    width: 100%;
+}
+
+.setting-page .user-info {
+    padding: 10px 10px 10px 0 !important;
+    position: relative;
+    /* Firefox */
+    display:-moz-box;
+    -moz-box-align:center;
+
+    /* Safari、Opera 以及 Chrome */
+    display:-webkit-box;
+    -webkit-box-align:center;
+
+    /* W3C */
+    display:box;
+    box-align:center;
+}
+
+.setting-page .item-content .item-inner {
+    border: 0 none;
+}
+
+.setting-page .user-info .avatar, .setting-page .user-info .avatar > img {
+    height: 55px;
+    width: 55px;
+}
+
+.setting-page .user-detail {
+  position: absolute;
+  margin: 5px 10px 10px 10px;
+}
+
+.setting-page .item-media {
+    color: #ffffff;
+    font-size: 28px;
+    height: 30px;
+    padding: 0;
+    text-align: center;
+    width: 30px;
+}
+
+.setting-page .feedback {
+    background-color: #38b57f;
+    background-position: 0 0;
+}
+
+.setting-page .update {
+    background-color: #fca405;
+    background-position: 0 -30px;
+}
+
+.setting-page .language {
+    background-color: #9b59b6;
+}
+
+.setting-page .about {
+    background-color: #5999f3;
+    background-position: -30px 0;
+}
+/*================================= course detail page =================================*/
+/*Programs list*/
+#courseSearchList {
+    margin: 0;
+}
+
+#courseSearchList .list-block {
+    font-size: 17px;
+    margin: 0;
+}
+
+
+
+.course-detail-page .list-block, .item-detail {
+    margin: 0 5px 15px;
+}
+
+.list-block .time-line-content .item-content {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #ebe9e9;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+    color: #6d6d72;
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+.list-block .item-inner {
+    border-bottom: 1px solid #c8c7cc;
+    box-sizing: border-box;
+    min-height: 44px;
+    padding-bottom: 7px;
+    padding-right: 15px;
+    padding-top: 8px;
+    width: 100%;
+}
+
+.list-block.media-list .item-inner, .list-block li.media-item .item-inner {
+    align-self: stretch;
+    display: block;
+    padding-bottom: 9px;
+    padding-top: 10px;
+}
+
+.list-block .time-line-content .item-content .item-inner {
+    background-repeat: no-repeat;
+    border: 0 none;
+    padding: 0;
+}
+
+.card-content .item-header {
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 13px;
+    margin: 0 10px;
+    overflow: hidden;
+    padding: 5px 0;
+}
+
+.card-content .item-header .avatar {
+    float: left;
+    height: 35px;
+    width: 35px;
+}
+
+.card-content .item-header .avatar > img {
+	background-color: white;
+    height: 35px;
+    width: 35px;
+}
+
+.card-content .item-header .detail {
+    float: left;
+    margin-left: 10px;
+}
+
+.card-content .item-header .detail > p {
+    margin: 0;
+}
+
+.card-content .item-header .detail .nickname {
+    color: #64f6a3;
+}
+
+.card-content .item-header .detail .create-time {
+    color: #999;
+    font-size: 11px;
+}
+
+.list-block .item-subtitle {
+    font-size: 15px;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-content .item-subtitle {
+    padding: 10px;
+    white-space: normal;
+}
+
+.list-block .time-line-content .item-content .item-inner .item-tools {
+    background-color: #f9f9f9;
+    border-top: 1px solid #f0f0f0;
+    color: #909090;
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: -1px;
+}
+
+.list-block ul ul {
+    border-bottom: medium none;
+    border-top: medium none;
+    padding-left: 45px;
+}
+
+.list-block ul ul {
+    padding-left: 0;
+}
+
+.icon {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+}
+
+i.icon {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: inline-block;
+    font-style: normal;
+    position: relative;
+    vertical-align: middle;
+}
+
+.list-block .time-line-content .item-content .item-inner .item-tools i.icon {
+    font-size: 20px;
+    line-height: 20px;
+    margin-right: 5px;
+}
+
+.ios7-redo-outline:before {
+    content: "+";
+}
+
+.list-block .time-line-content .item-content .item-inner .item-tools > ul > li {
+    float: left;
+    text-align: center;
+    width: 32%;
+}
+
+.list-block .time-line-content .item-content .item-inner .item-tools .tool-line {
+    border-left: 1px solid #f0f0f0;
+    height: 28px;
+    margin-top: 5px;
+    width: 1%;
+}
+/*================================= Rate My Prof ===================================*/
+/*profs list*/
+#profSearchList {
+    margin: 0;
+}
+
+#profSearchList .list-block {
+    font-size: 17px;
+    margin: 0;
+}
+
+
+.profs-list ul {
+    border: medium none;
+}
+
+.profs-list .list-block .item-content {
+    padding-left: 5px;
+    width: 100%;
+}
+
+.profs-list .item-media {
+    padding-bottom: 8px !important;
+    padding-top: 7px !important;
+}
+
+.profs-list .item-media img {
+    border-radius: 24px;
+    height: 48px;
+    width: 48px;
+}
+
+.profs-list .item-title {
+    color: #000;
+}
+
+.profs-list .item-subtitle {
+    color: #777777;
+    font-size: 13px;
+}
+
+/* prof detail view*/
+.prof-header {
+    display: flex;
+	background: none repeat scroll 0 0 #fff;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    min-height: 200px;
+    height: 30%;
+    z-index: 10;
+
+}
+
+.prof-page .item-photo {
+    flex-shrink: 0;
+    margin: 20px;
+}
+
+.prof-page .item-photo img {
+    border-radius: 50px;
+    display: block;
+    height: 100px;
+    width: 100px;
+}
+
+.prof-page .header-text .icon-favorite {
+    color: #74baee;
+    font-size: 16px;
+    left: 106px;
+    position: relative;
+    top: 60px;
+}
+
+.prof-page .header-text {
+    display: inline-block;
+    margin-top: 10px;
+    vertical-align: top;
+}
+
+.prof-page .header-text h3 {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.prof-page .header-text h4 {
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.prof-page .header-text p {
+    margin-top: 0.5em;
+}
+
+.prof-page .list-block {
+    margin-top: 0;
+
+}
+
+.prof-page .list-block ul {
+    border-bottom: 0 none;
+    border-top: 0 none;
+}
+
+.prof-page .list-block ul .item-media {
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+.prof-page .list-block ul .item-media i {
+    color: #007aff;
+    font-size: 24px;
+}
+
+
+/*================================= Program Intro ===================================*/
+/*Programs list*/
+#programSearchList {
+    margin: 0;
+}
+
+#programSearchList .list-block {
+    font-size: 17px;
+    margin: 0;
+}
+
+.programs-list ul {
+    border: medium none;
+}
+
+.programs-list .list-block .item-content {
+    padding-left: 5px;
+    width: 100%;
+}
+
+/*Programs detail view*/
+.program-header {
+    background: none repeat 0 0 #fff;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    height: 90px;
+    padding: 20px 15px;
+    position: relative;
+    z-index: 10;
+}
+
+.program-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 22px;
+    margin-bottom: 5px;
+    max-height: 44px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+}
+
+.program-info {
+    color: #8e8e93;
+}
+
+.program-comments {
+    box-sizing: border-box;
+    height: calc(100% - 90px);
+    overflow: auto;
+    position: relative;
+}
+
+.program-comments .messages {
+    padding-bottom: 20px;
+}
+
+
+.program-comments .message {
+    max-width: 95%;
+}
+
+.program-comments .message-name {
+	text-align:center;
+	margin-bottom:10px;
+}
+
+.program-comments .message-name .comment-name {
+    color: #333;
+    font-size: 17px;
+}
+
+.program-comments .message-text {
+    background: none repeat scroll 0 0 #fff;
+    color: #000;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.program-comments .message-received.message-last .message-text, .message-received.message-with-tail .message-text {
+    border-radius: 16px 16px 16px 16px;
+}
+
+
+/*==================================== Course Scedule ===============================*/
+/*courseSchedule header*/
+.navbar-extra-courseSchedule {
+	/*background: none repeat scroll 0 0 #007aff;*/
+	box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-bottom: medium none;
+	height: 110px;
+}
+
+.schedule-page .timetable-fixed-header {
+	margin-top:40px;
+}
+
+.schedule-page .page-content {
+    padding-top: 0;
+    width:100%;
+    height:100%;
+}
+
+#table_content {
+    margin: 0;
+}
+
+.courseSchedule-header {
+    background: none repeat scroll 0 0 #fff;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    height: 130px;
+    padding: 20px 15px;
+    position: relative;
+    z-index: 10;
+	margin-top: 40px;
+}
+
+/* Time Table */
+table {
+    border-collapse: collapse;
+    margin: 0;
+    width: 100%;
+}
+
+.timetable {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 0 0 10px;
+    padding: 0;
+    position: relative;
+}
+
+.th-time {
+	border: 1px solid #888;
+    border-radius: 4px;
+    font-size: smaller;
+    line-height: normal;
+    overflow: hidden;
+    padding: 3px;
+    text-shadow: none;
+    white-space: nowrap;
+	background-color: #888;
+    background-image: -moz-linear-gradient(center top , #62c462, #51a351);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+
+.btn-course {
+	border: 1px solid #888;
+    border-radius: 5px;
+    font-size: smaller;
+    line-height: normal;
+    overflow: hidden;
+    padding: 3px;
+    text-shadow: none;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	color: #ffffff;
+}
+
+.time_table_header th {
+	border: none;
+    background-color: #D0D0D0;
+    color: #fff;
+    text-align: center;
+	height:15px;
+	font-size: 12px;
+    line-height: normal;
+    overflow: hidden;
+}
+
+#timetable th {
+	border: none;
+    background-color: #D0D0D0;
+    color: #fff;
+    text-align: center;
+	height:50px;
+}
+
+th.timeline {
+	width: 10%;
+    font-size: 12px;
+    line-height: normal;
+    overflow: hidden;
+    padding: 3px;
+    text-shadow: 1px 1px #888;
+    white-space: nowrap;
+    background-image: -moz-linear-gradient(center top , #B5B5B5, #CFCFCF);
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+
+th.timeline.blank {
+	width: 10%;
+	background-image: -moz-linear-gradient(center top , #696969, #828282);
+	border: 1px solid #ffffff;
+}
+
+
+th.weekdays {
+	width: 12%;
+	font-size: 10px;
+}
+
+td {
+	background-color: #F8F8F8;
+	border: 1px dashed #E8E8E8;
+    padding: 0.5em;
+    text-align: center;
+	font-size:11px;
+	width: 10%;
+}
+
+/*==================================== Course Scedule Detail ===============================*/
+
+
+
+/*================================= Used Book List ===================================*/
+/*books list*/
+#bookSearchList {
+    margin: 0;
+}
+
+#bookSearchList .list-block {
+    font-size: 17px;
+    margin: 0;
+}
+
+
+.books-list ul {
+    border: medium none;
+}
+
+.books-list .list-block .item-content {
+    padding-left: 5px;
+    width: 100%;
+}
+
+.books-list .item-media {
+    padding-bottom: 8px !important;
+    padding-top: 7px !important;
+}
+
+.books-list .item-media img {
+    border-radius: 24px;
+    height: 48px;
+    width: 48px;
+}
+
+.books-list .item-title {
+    color: #000;
+}
+
+.books-list .item-subtitle {
+    color: #777777;
+    font-size: 13px;
+}
+
+/* book detail view*/
+.book-header {
+    background: none repeat 0 0 #fff;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    height: 100px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.book-seller {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 5px;
+    max-height: 40px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+}
+
+.book-info {
+	font-size: 15px;
+    color: #8e8e93;
+}
+
+.book-comments {
+    box-sizing: border-box;
+    height: calc(100% - 90px);
+    overflow: auto;
+    position: relative;
+}
+
+.book-comments .messages {
+    padding-bottom: 20px;
+}
+
+
+.book-comments .message {
+    max-width: 95%;
+}
+
+.book-comments .message-name {
+	text-align:center;
+	margin-bottom:10px;
+}
+
+.book-comments .message-name .comment-name {
+    color: #333;
+    font-size: 17px;
+}
+
+.book-comments .message-text {
+    background: none repeat scroll 0 0 #fff;
+    color: #000;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.book-comments .info-text {
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.book-comments .message-received.message-last .message-text, .message-received.message-with-tail .message-text {
+    border-radius: 16px 16px 16px 16px;
+}
+
+/* Book upload page */
+.formWarning{
+	
+}
+
+#uploadBook{
+	
+}
+
+#uploadBook .bookLeft {
+	
+}
+
+#uploadBook .bookRight {
+	
+}
+
+.bookButton {
+	
+}
+
+
+
+
+/*================================= Tutor List ===================================*/
+/*tutors list*/
+#tutorSearchList {
+    margin: 0;
+}
+
+#tutorSearchList .list-block {
+    font-size: 17px;
+    margin: 0;
+}
+
+
+.tutors-list ul {
+    border: medium none;
+}
+
+.tutors-list .list-block .item-content {
+    padding-left: 5px;
+    width: 100%;
+}
+
+.tutors-list .item-media {
+    padding-bottom: 8px !important;
+    padding-top: 7px !important;
+}
+
+.tutors-list .item-media img {
+    border-radius: 24px;
+    height: 48px;
+    width: 48px;
+}
+
+.tutors-list .item-title {
+    color: #000;
+}
+
+.tutors-list .item-subtitle {
+    color: #777777;
+    font-size: 13px;
+}
+
+/* tutor detail view*/
+.tutor-header {
+    background: none repeat 0 0 #fff;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    height: 60px;
+    padding: 20px 15px;
+    position: relative;
+    z-index: 10;
+}
+
+.tutor-name {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 5px;
+    max-height: 36px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+}
+
+.tutor-comments {
+    box-sizing: border-box;
+    height: calc(100% - 90px);
+    overflow: auto;
+    position: relative;
+}
+
+.tutor-comments .messages {
+    padding-bottom: 20px;
+}
+
+
+.tutor-comments .message {
+    max-width: 95%;
+}
+
+.tutor-comments .message-name {
+	text-align:center;
+	margin-bottom:10px;
+}
+
+.tutor-comments .message-name .comment-name {
+    color: #333;
+    font-size: 17px;
+}
+
+.tutor-comments .message-text {
+    background: none repeat scroll 0 0 #fff;
+    color: #000;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.tutor-comments .contact-text {
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.tutor-comments .message-received.message-last .message-text, .message-received.message-with-tail .message-text {
+    border-radius: 16px 16px 16px 16px;
+}
+
+
+/*==================================== News ===============================*/
+.news-page .content-block {
+	margin: 0;
+    padding: 0;
+}
+
+
+.news-page .content-block-title {
+    color: #6d6d72;
+    font-size: 18px;
+    margin: 15px 15px 10px;
+}
+
+.slider-container {
+  height: 150px;
+  margin: 15px 0;
+  background-size: auto;
+}
+
+.slider-slide {
+  background: #fff;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+
+}
+.slider-slide span {
+  text-align:center;
+  display:block;
+  margin: 20px;
+  font-size:21px;
+
+}
+
+
+#s1Image {
+    background-repeat: no-repeat;
+    background-position: center;
+      background-size: contain;
+
+}
+
+#s2Image{
+    background-repeat: no-repeat;
+    background-position: center;
+      background-size: contain;
+}
+
+#s3Image {
+    background-repeat: no-repeat;
+    background-position: center;
+      background-size: contain;
+}
+
+
+/*==================================== transit ===============================*/
+.custom-accordion .accordion-item-toggle {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    color: #000;
+    cursor: pointer;
+    font-size: 17px;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 15px;
+}
+
+.custom-accordion .accordion-item-expanded .icon-ks-plus {
+    color:  #308ee6;
+    display: none;
+
+}
+
+.custom-accordion .icon-ks-plus, .custom-accordion .icon-ks-minus {
+    border: 1px solid  #308ee6;
+    border-radius: 100%;
+    display: inline-block;
+    height: 22px;
+    line-height: 20px;
+    text-align: center;
+    width: 22px;
+    color:  #308ee6;
+}
+
+.custom-accordion .accordion-item-expanded .icon-ks-minus {
+    display: inline-block;
+}
+
+.custom-accordion .icon-ks-minus {
+    display: none;
+}
+
+.custom-accordion .accordion-item-toggle span {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.custom-accordion .accordion-item-content {
+    padding: 0 15px;
+}
+
+
+.transit-page .page-content {
+    margin-top:-12px;
+    background-color: none;
+
+
+}
+
+.accordion-item-toggle{
+
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #ebe9e9;
+    box-shadow: none;
+    color: #6d6d72;
+    margin: 10px 0 0;
+}
+
+.toggle-img {
+    background-color: #fff;
+    background-position: 0 0;
+    color: #6d6d72;
+    font-size: 28px;
+    height: 30px;
+    padding: 0;
+    text-align: center;
+    width: 30px;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    padding-bottom: 8px;
+    padding-top: 7px;
+    background: url("../img/drop_open.png") no-repeat;
+}
+
+
+.toggle-bar {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    min-height: 44px;
+    padding-left: 15px;
+    background: none repeat scroll 0 0 #F8F8F8;
+    border: 1px solid #ebe9e9;
+    box-shadow: none;
+    color: #308ee6 !important;
+    margin: 10px 0 0;
+}
+
+#transit-bg {
+  background-color: white !important;
+}
+
+/* slider */
+.slider-container.transit-slider {
+  margin:0;
+  padding:0;
+    height: 25%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+#transitList {
+  margin:0;
+  padding:0;
+}
+
+#transitList .list-block {
+  margin:0;
+  padding:0;
+}
+
+
+
+/*==================================== campus status ===============================*/
+ .with-border{
+    border: 1px solid #a1a1a1;
+    background: white;
+    border-radius: 25px;
+}
+
+
+/*======================================table==========================================*/
+table {
+*border-collapse: collapse; /* IE7 and lower */
+border-spacing: 0;
+width: 100%;
+}
+
+.bordered {
+border: solid #ccc 1px;
+-webkit-box-shadow: 0 1px 1px #ccc;
+-moz-box-shadow: 0 1px 1px #ccc;
+box-shadow: 0 1px 1px #ccc;
+}
+
+.bordered tr:hover {
+background: #fbf8e9;
+-o-transition: all 0.1s ease-in-out;
+-webkit-transition: all 0.1s ease-in-out;
+-moz-transition: all 0.1s ease-in-out;
+-ms-transition: all 0.1s ease-in-out;
+transition: all 0.1s ease-in-out;
+}
+
+.bordered td, .bordered th {
+border-left: 1px solid #ccc;
+border-top: 1px solid #ccc;
+padding: 10px;
+text-align: left;
+}
+
+.bordered th {
+  color: white;
+    font-size: 70%;
+background-color: #acd8fa;
+
+
+border-top: none;
+
+}
+
+.bordered td:first-child, .bordered th:first-child {
+border-left: none;
+}
+
+
+
+
+
+/*----------------------*/
+.zebra td, .zebra th {
+padding: 10px;
+border-bottom: 1px solid #f2f2f2;
+}
+
+.zebra tbody tr:nth-child(even) {
+background: #f5f5f5;
+-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+-moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+}
+
+.zebra th {
+font-size: 70%;
+text-align: left;
+text-shadow: 0 1px 0 rgba(255,255,255,.5);
+border-bottom: 1px solid #ccc;
+background-color: #eee;
+background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));
+background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
+background-image: -moz-linear-gradient(top, #f5f5f5, #eee);
+background-image: -ms-linear-gradient(top, #f5f5f5, #eee);
+background-image: -o-linear-gradient(top, #f5f5f5, #eee);
+background-image: linear-gradient(top, #f5f5f5, #eee);
+}
+
+.zebra th:first-child {
+-moz-border-radius: 6px 0 0 0;
+-webkit-border-radius: 6px 0 0 0;
+border-radius: 6px 0 0 0;
+}
+
+.zebra th:last-child {
+-moz-border-radius: 0 6px 0 0;
+-webkit-border-radius: 0 6px 0 0;
+border-radius: 0 6px 0 0;
+}
+
+.zebra th:only-child{
+-moz-border-radius: 6px 6px 0 0;
+-webkit-border-radius: 6px 6px 0 0;
+border-radius: 6px 6px 0 0;
+}
+
+.zebra tfoot td {
+border-bottom: 0;
+border-top: 1px solid #fff;
+background-color: #f1f1f1;
+}
+
+.zebra tfoot td:first-child {
+-moz-border-radius: 0 0 0 6px;
+-webkit-border-radius: 0 0 0 6px;
+border-radius: 0 0 0 6px;
+}
+
+.zebra tfoot td:last-child {
+-moz-border-radius: 0 0 6px 0;
+-webkit-border-radius: 0 0 6px 0;
+border-radius: 0 0 6px 0;
+}
+
+.zebra tfoot td:only-child{
+-moz-border-radius: 0 0 6px 6px;
+-webkit-border-radius: 0 0 6px 6px
+border-radius: 0 0 6px 6px
+}
+
+
+
+
+
+/*====================================== progree bar ================================*/
+.progress {
+  height: 40px;
+  background-color: white !important;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left:none;
+  border-right:none;
+  border-color: #c73321 #b12d1e #8e2418;
+  border: 1px solid;
+  border-color: #bfbfbf #b3b3b3 #9e9e9e;
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.progress > span {
+  position: relative;
+  float: left;
+  height: 40px;
+  line-height: 16px;
+  text-align: right;
+  border-color: #bfbfbf #b3b3b3 #9e9e9e;
+  background-image: -webkit-linear-gradient(top, #f0f0f0, #dbdbdb 70%, #cccccc);
+  background-image: -moz-linear-gradient(top, #f0f0f0, #dbdbdb 70%, #cccccc);
+  background-image: -o-linear-gradient(top, #f0f0f0, #dbdbdb 70%, #cccccc);
+  background-image: linear-gradient(to bottom, #f0f0f0, #dbdbdb 70%, #cccccc);
+
+}
+.progress > span > span {
+  padding: 0 8px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #404040;
+  color: rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.4);
+}
+.progress > span:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 18px;
+
+
+}
+.progress .green {
+
+  background-image: -webkit-linear-gradient(left, #7be1f5, #fff);
+  background-image: -moz-linear-gradient(left, #7be1f5, #fff);
+  background-image: -o-linear-gradient(left, #7be1f5, #fff );
+  background-image: linear-gradient(to right, #7be1f5, #fff);
+}
+.progress .red {
+  background-image: -webkit-linear-gradient(right, #f93883, #fff);
+  background-image: -moz-linear-gradient(right, #f93883, #fff);
+  background-image: -o-linear-gradient(right, #f93883, #fff );
+  background-image: linear-gradient(to left, #f93883, #fff);
+}
+.progress .orange {
+  background: #f2b63c;
+  border-color: #f0ad24 #eba310 #c5880d;
+  background-image: -webkit-linear-gradient(top, #f8da9c, #f5c462 70%, #f2b63c);
+  background-image: -moz-linear-gradient(top, #f8da9c, #f5c462 70%, #f2b63c);
+  background-image: -o-linear-gradient(top, #f8da9c, #f5c462 70%, #f2b63c);
+  background-image: linear-gradient(to bottom, #f8da9c, #f5c462 70%, #f2b63c);
+}
+.progress .blue {
+  background: #5aaadb;
+  border-color: #459fd6 #3094d2 #277db2;
+  background-image: -webkit-linear-gradient(top, #aed5ed, #7bbbe2 70%, #5aaadb);
+  background-image: -moz-linear-gradient(top, #aed5ed, #7bbbe2 70%, #5aaadb);
+  background-image: -o-linear-gradient(top, #aed5ed, #7bbbe2 70%, #5aaadb);
+  background-image: linear-gradient(to bottom, #aed5ed, #7bbbe2 70%, #5aaadb);
+}
+
+/*==============================================settings====================================*/
+#loginBtn {
+    margin-top: 15px;
+}
+
+#sfu a:hover{
+	color: yellow;
+	 
+}
+
+
+#sfu a:active{
+	color: yellow;
+	 
+}
+
+
+/*============================================Index page====================================*/
+/* Copied from indexstyle.css */
+
+body.indexBody
+{
+	margin: 0;
+
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+
+	color: #ffffff;
+
+	text-align: center;
+
+
+}
+
+
+
+.menu
+{
+	background-color: #202020;
+
+	font-size: 80%;
+
+	font-weight: normal;
+
+	height: 6vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+#sfu, #ubc, #uvic
+{
+
+	font-weight: bold;
+    display:-webkit-flex;
+    -webkit-align-items:center;
+    -webkit-justify-content:center;
+	height: 20vh;
+}
+
+#sfu
+{
+	background-color: #f34235;
+
+	height: 50vh;
+
+	font-size: 800%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+#ubc
+{
+	background-color: #002145;
+
+	height: 25vh;
+    
+    font-size:125%;
+	color:#d3d3d3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#uvic
+{
+	background-color: #005493;
+
+	height: 24vh;
+    font-size:125%;
+    color:#d3d3d3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#coming
+{
+	font-size: 120%;
+
+	font-weight: normal;
+
+	height: 19vh;
+
+
+	background-color: #ababab;
+
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+#evilAcademy
+{
+	font-size: 120%;
+	color:#FFF;
+	font-weight: normal;
+
+	height: 24vh;
+
+
+	background-color: #fd9733;
+
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+/* .indexPage a:link {
+    text-decoration: none;
+}
+
+.indexPage a:visited {
+    text-decoration: none;
+} */
+
+/* unvisited link */
+.indexPage a:link {
+	text-decoration: none;
+    color: #ffffff;
+}
+
+/* visited link */
+.indexPage a:visited {
+	text-decoration: none;
+    color: #ffffff;
+}
+
+/* mouse over link */
+.indexPage a:hover {
+    color: #4496FF;
+}
+
+/* selected link */
+.indexPage a:active {
+    color: #4496FF;
+}
+
+.indexPage {
+   text-align: center;
+}
+
+/*================================= Upload From =====================================*/
+
+.bookLeft{
+/*  margin-left: auto;
+  margin-right: auto;
+  width: 250px;*/
+
+}
+
+.bookRight{
+/*margin-left: auto;
+  margin-right: auto;
+  width: 250px;*/
+}
+
+.redlabel{
+  margin-left: auto;
+  margin-right: auto;
+  width: 240px
+}
+
+.submitform{
+  margin-left: auto;
+  margin-right: auto;
+  width:250px;
+}
+
+.formButton {
+  padding-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width:250px;
+}
+
+.primaryBtn{
+}
+
+.formButton .primaryBtn #submitBtn {
+	background-color:#4cd964;
+	width:100%;
+	height:36px;
+	border:none;
+	color:#fff;
+}
+
+.secondaryBtn {
+	padding-top:10px;
+	text-align:center;
+}
+
+.formButton .secondaryBtn #resetBtn {
+	width:80px;
+	height:24px;
+}
+
+/*================================= Custom Alert Box =====================================*/
+
+#dialogoverlay{
+	display: none;
+	opacity: .2;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: #000;
+	width: 100%;
+	z-index: 10;
+}
+
+#dialogbox{
+	display: none;
+	position: fixed;
+	background: #FFF;
+	border-radius:8px; 	
+	width:300px;
+	z-index: 10;
+}
+
+#dialogbox > div{ background:#FFF; margin:8px; }
+#dialogbox > div > #dialogboxbody{ padding:30px; color:#000; }
+#dialogbox > div > #dialogboxfoot{ padding:10px; text-align:center; }
+
+

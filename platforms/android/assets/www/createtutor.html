@@ -1,0 +1,85 @@
+
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left sliding">
+            <a href="sfuindex.html" class="back link"><i class="icon icon-back"></i></a>
+        </div>
+        <div class="center sliding" style="margin-left:-20px;">Tutor Information</div>
+    </div>
+</div>
+
+<div class="pages">
+    <div class="page news-page">
+        <div class="page-content">
+            <div class="content-block">
+                <div class="content-block-inner">
+                    <div class="content-block-title">Fill tutor information here:  </div>
+
+                    <!--<div class="slider-container slider-1">
+                        <div class="slider-pagination"></div>
+                        <div class="slider-wrapper">
+                            <div class="slider-slide s1" id="s1Image"><a href="www.sfu.ca">asdads</a></div>
+                            <div class="slider-slide s2" id="s2Image"><span id="s2Text"></span></div>
+                            <div class="slider-slide s3" id="s3Image"><span id="s3Text"></span></div>
+                        </div>
+                    </div>-->
+                    <div class = "redlabel">
+                    	<p><font color="red">* required field.</font></p>
+                    </div>                    
+                    <form id = "uploadTutor" method="post"  enctype="multipart/form-data"  onSubmit="return submitTutorForm();">
+    					<div class="submitform">
+						  <ul>
+                            <li><div class="formLeft"><span class = "strContactName">Name: </span></div>
+                                <div class="formRight"><input type = "text"  name = 'tutorName'  maxlength="32" title="Please enter a name that others can refer you by."> 
+                                <font color="red">*</font></div>
+                            </li>
+
+                            <li><div class="formLeft"><span class = "strCourseName">Course: </span></div>
+                                <div class="formRight"><input type = "text"  name = "tutorCourse"  placeholder="(e.g Math 100)" maxlength="16"  title="Follow the format [course_id course_number] e.g. Math 100">
+                                <font color="red">*</font></div>
+                            </li>
+
+                            <li><div class="formLeft"><span class = "strContactEmail">Email: </span></div>
+                                <div class="formRight"><input type = "text"  name='email'  maxlength="64">  
+                                <font color="red">*</font></div>
+                            </li>   
+                            
+                            <li><div class="formLeft"><span class = "strContactPhone">Telephone: </span></div>
+                                <div class="formRight"><input type = "text"  name='telephone'  maxlength="15"  title="Allowed Characters:[0-9]. Length Requirement:10-15"> 
+                                <font color="red">*</font></div>
+                            </li>
+
+                             <li><div class="formLeft"><span class = "strTutorDesc">Description: </span></div>
+                                <div class="formRight"><textarea name="tutorDesc" rows="3" cols="22" maxlength="256"></textarea></div>
+                            </li>
+                         </ul>
+                       	</div>
+                    	<div class = "formButton">
+                            <div class="primaryBtn">
+                            	<button  id="submitBtn" type="submit" value="Submit" name="submitBtn" >Submit</button>
+                            </div>
+                            <div class="secondaryBtn">
+                            	<button id="resetBtn" type="reset" value="Reset">Reset</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+
+<!--                     <div class="tutorReturnValue">
+                    ReturnID: <div id="tutorReturnID"></div>
+                    EditKey: <div id="tutorEditKey"></div> 
+                    </div> -->
+                                            
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

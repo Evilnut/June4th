@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>Connect-ED</title>
+
+		<!-- Path to Framework7 Library CSS-->
+		<link rel="stylesheet" href="css/framework7.min.css">
+		<link rel="stylesheet" href="css/ionicons.css">
+		<!-- Path to your custom app styles-->
+		<link rel="stylesheet" href="css/style.css">
+   
+
+	<!---->
+	<script type="text/javascript" src="js/lib/jquery-2.1.1.min.js"></script>
+
+		<script type="text/javascript" src="js/alertmsg.js"></script>
+		<script type="text/javascript" src="js/createtutor.js"></script>
+		<script type="text/javascript" src="js/createbook.js"></script>		
+	<!--	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>-->
+        <script type="text/javascript" src="js/menubar.js"></script>
+
+
+    <!-- jqPagination styles 
+        <script src="./js/jquery-1.7.2.min.js"></script>-->
+    	<link rel="stylesheet" href="css/jqpagination.css" />
+    	<link rel="stylesheet" href="css/reset.css" />
+    <!-- script and css for pagination-->
+
+    <script type="text/javascript" src="./js/jquery.jqpagination.js"></script>
+   <!-- <script type="text/javascript" src="./js/scripts.js"></script>
+-->
+
+
+	
+
+        
+
+        <!--<script>
+            var text = '';
+            text =  text + navigator.onLine;
+            alert("network status:" + text);
+
+            if(navigator.onLine){
+                connected();
+            }else{
+                notConnected();
+            }
+
+            function connected() {
+                alert("Connected");
+                return;
+            }
+
+            function notConnected() {
+                alert("Please connect to the network first!");
+            }
+
+        </script>-->
+
+
+	</head>
+
+	<body>
+		<!-- Status bar overlap by PhoneGap -->
+		<div class="statusbar-overlay"></div>
+		<!-- Panels overlay-->
+		<div class="panel-overlay"></div>
+		<!-- Left panel with reveal effect -->
+		<div class="panel panel-left panel-reveal">
+			<div class="content-block">
+				<p>Left panel content goes here</p>
+			</div>
+		</div>
+		<div class="panel panel-right panel-cover layout-dark">
+			<div class="view view-right">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="center sliding">Right Panel</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Views-->
+		<div class="view">
+
+			<!-- main view, should have "View-main" class-->
+			<div class="view view-main">
+				<!-- Top Navbar-->
+				<div class="navbar navbar-extra">
+					<div class="navbar-inner">
+						<!-- We have home navbar without left link-->
+
+						<div class="left sliding">
+							<a href="index.html"><i class="icon index-back-icon"></i></a>
+						</div>
+						<div class="center sliding" style="font-weight: bold;font-size:300%">SFU</div>
+<!-- 						<div id="login" class="right" >
+							Right link contains only icon - additional "icon-only" class
+							<a href="setting.html" class="">
+								<img style="width:45px; margin-left:2%;" src="img/index/setting_f.png"/>
+							</a>
+						</div> -->
+					</div>
+				</div>
+
+				<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+				<div class="pages navbar-through toolbar-through">
+					<!-- Page, data-page contains page name-->
+					<div data-page="index" class="page index-page" id="main">
+						<!-- Scrollable page content-->
+						<div class="page-content" style="background-image:url(img/index/background.png);background-size:cover">
+							<div class="list-block"style="height:95%">
+								<div class="row" style="height:25%">
+									<div  class="col-icon"><!-- id="stretch" > -->
+										<a href="coursesearch.html">
+											<img src="img/index/search_course.png"/>	
+										</a>
+										
+									</div>
+									<!-- <div class ="strpanel">
+                                        <a href="coursesearch.html"><div class="strCourseSearch">course search</div></a>
+								
+									</div></div>
+									<div class="row"style="background-color:#fd7f28" > -->
+									<div  class="col-icon"><!--id="Div1"> style="background-color:#fd7f28" > -->
+										<a href="ratemyprof.html" >
+											<img src="img/index/rate_my_prof.png"/>  
+										</a>
+										
+									</div>
+<!-- 									<div class ="strpanel">
+                                        <a href="ratemyprof.html" ><div class="strRateMyProf">	rate my prof</div></a>
+									</div> --></div>
+									<div class="row"style="height:25%"><!-- style="background-color:#fd912f" > -->
+									<div  class="col-icon"><!-- id="Div2">style="background-color:#fd912f" > -->
+										<a href="programintro.html">
+											<img src="img/index/program_intro_menu.png"/>
+										</a>
+										
+									</div>
+<!--  									<div class ="strpanel">
+                                        <a href="programintro.html"><div class="strProgramIntro"> program intro</div></a>
+                                    </div> 
+								</div>
+
+                               Campus status
+								<div class="row"style="background-color:#fd9733" > -->
+									<div  class="col-icon"><!-- id="Div3">"background-color:#fd9733" > -->
+										<a href="campusstatus.html">
+											<img src="img/index/campus_status_menu.png"/>
+											<!-- <i class="icon icon-cs" id="cs"/></i> -->
+										</a>
+										
+									</div>
+<!-- 									<div class ="strpanel">
+                                        <a href="campusstatus.html"><div class="strCampusStatus">campus status</div></a>
+									</div> --></div>
+                               <!-- end of campus status-->
+
+                                <!--  Campus Map-->
+									<div class="row"style="height:25%"><!-- "background-color:#fda63d" > -->
+									<div  class="col-icon"><!--id="Div4"> style="background-color:#fda63d" > -->
+										<a href="campusmap.html">
+											<img src="img/index/campus_map.png"/>
+										</a>
+										
+									</div>
+									
+<!-- 									<div class ="strpanel">
+                                        <a href="campusmap.html"><div class="strCampusMap">compus map</div></a>
+								</div></div>
+                               end of campus map
+
+                               second-hand book
+
+                                <div class="row" style="background-color:#fdb244" > -->
+                                    <div  class="col-icon"> <!--id="Div6">  style="background-color:#fdb244" > -->
+                                        <a href="booklist.html">
+                                            <img src="img/index/used_books.png"/>
+                                        </a>
+                                    </div>
+
+<!--                                     <div class ="strpanel">
+                                        <a href="booklist.html"><div class="strSecondHandBook">used books</div></a>
+                                    </div> -->
+                                </div>
+                               <!-- end of second-hand book-->
+
+                                <!--  tutor -->
+
+                                <div class="row"style="height:25%"><!-- "background-color:#fdc14e" > -->
+                                    <div  class="col-icon"> <!--id="Div7"> style="background-color:#fdc14e" > -->
+                                        <a href="tutorlist.html">
+                                            <img src="img/index/tutors.png"/>
+                                        </a>
+                                    </div>
+
+    <!--                                 <div class ="strpanel">
+                                        <a href="tutorlist.html"><div class="strTutor">Tutor</div></a>
+                                    </div>
+                                </div>
+                                end of second-hand book
+
+                                <div class="row"style="background-color:#fecc56" > -->
+                                    <div  class="col-icon"><!--id="Div6">  style="background-color:#fecc56" > -->
+                                        <a href="setting.html"><img src="img/index/settings.png"/></a>
+                                    </div>
+
+<!--                                     <div class ="strpanel">
+                                        <a href="campusmap.html"><div class="strCampusMap">compus map</div></a>
+                                    </div> --></div>
+
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+				<div id="dialogoverlay"></div>
+				<div id="dialogbox">
+					<div>
+						<div id="dialogboxbody"></div>
+						<div id="dialogboxfoot"></div>
+					</div>
+				</div>
+
+				<!--Bottom Toolbar  -->
+				<div class="toolbar tabbar-labels">
+					<div class="toolbar-inner">
+						<div id="indexBack">
+							<a href="sfuindex.html" class="link-nav" onclick="changeBackColor1()">
+								<i class="icon ks-tabbar-icon-1" ></i>
+								<!-- <span class="tabbar-label"><span >Home</span></span> -->
+							</a>
+						</div>
+						
+						<div id="scheduleBack">
+							<a href="courseschedule.html" class="link-nav" onclick="changeBackColor2()">
+								<i class="icon ks-tabbar-icon-2"></i>
+								<!-- <span class="tabbar-label"><span>Schedule</span></span> -->
+							</a>
+						</div>
+						
+						<div id="accountBack">
+							<a href="#" class="link-nav" id="ac" onclick="changeBackColor3()">
+								<i class="icon ks-tabbar-icon-3"></i>
+								<!-- <span class="tabbar-label"><span>Services</span></span> -->
+							</a>
+						</div>
+						
+						
+						<div id="newsBack">	
+							<a href="news.html" class="link-nav" onclick="changeBackColor4()">
+								<i class="icon ks-tabbar-icon-4"></i>
+								<!-- <span class="tabbar-label"><span>News</span></span> -->
+	
+							</a>
+						</div>	
+							
+						<div id="transitBack">
+							<a href="transit.html" class="link-nav" onclick="changeBackColor5()">
+								<i class="icon ks-tabbar-icon-5"></i>
+								<!-- <span class="tabbar-label"><span>Transit</span></span> -->
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!-- login screen-->
+		<div class="login-screen">
+			<div class="view">
+				<div class="page">
+					<div class="page-content login-screen-content">
+						<div class="login-screen-title"><span class="strLogin"></span></div>
+						<form>
+							<div class="list-block">
+								<ul>
+									<li class="item-content">
+										<div class="item-inner">
+											<div class="item-title label"><span class="strComputerID"></span></div>
+											<div class="item-input">
+												<input type="text" name="username" placeholder="SFU Computer ID">
+											</div>
+										</div>
+									</li>
+									<li class="item-content">
+										<div class="item-inner">
+											<div class="item-title label"><span class="strPassword"></span></div>
+											<div class="item-input">
+												<input class="login-password" type="password" name="password" placeholder="password">
+											</div>
+										</div>
+									</li>
+								</ul>
+
+								<ul style="margin-top:30px;">
+								    <!-- Single chekbox item -->
+								    <li>
+								      <label class="label-checkbox item-content">
+								        <!-- Checked by default -->
+								        <input class="remember-check" type="checkbox" name="my-checkbox" value="remember" >
+								        <div class="item-media">
+								          <i class="icon icon-form-checkbox"></i>
+								        </div>
+								        <div class="item-inner">
+								          <div class="item-title">Remember account</div>
+								        </div>
+								      </label>
+								    </li>
+
+								</ul>
+								<div style="padding:0 10px 0 10px;font-size:70%；word-wrap: break-word;word-break: normal; ">
+									<p style="color:gray">By selecting this check box and the sign-in button, I agree to these </p> 
+									<p id="conditions" style="color:blue;text-align:center;">Terms and Conditions </p>
+								</div>								
+								
+							</div>
+							<div class="list-block">
+								<ul>
+									<li><a href="#" class="item-link list-button login-button"><span class="strSignIn"></span></a></li>
+									<li><a href="#" class="item-link list-button cancel-button"><span class="strCancel"></span></a></li>
+								</ul>
+								<div class="list-block-label">Login by your SFU account</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- template7 scripts -->
+		<script type="text/template7" id="coursesListScript">
+			<div class="list-block media-list" style="display: block;">
+				<ul>
+				{{#each this}}
+					<li>
+						<a href="coursedetail.html?course={{course}}" data-contextName="courses.{{@index}}" class="item-content item-link" >
+							<div class="item-content">
+								<div class="item-media">
+									<img width="44" src="img/avatar/avatar01.jpg">
+								</div>
+								<div class="item-inner">
+									<div class="item-title-row">
+										<div id="courseSearchContent" class="item-title">{{department}} {{course}}</div>
+									</div>
+									<div class="item-subtitle">{{termStr}}</div>
+									<div class="item-subtitle">WQB:{{course_type}}</div>
+								</div>
+							</div>
+						</a>
+					</li>
+				{{/each}}
+				</ul>
+			</div>
+		</script>
+
+		<script type="text/template7" id="courseDetailScript">
+			<div class="list-block media-list" style="display: block;">
+				<ul class="time-line-content">
+				{{#each this}}
+					<li class="item-content card-content" data-id="41">
+						<div class="item-inner">
+							<div class="item-header">
+								<div class="detail">
+									<p class="nickname">{{name}} {{number}} {{section}}</p>
+									<p class="create-time">{{title}}</p>
+								</div>
+							</div>
+							<table class="bordered">
+							<thead>
+								<tr>
+									<th><span class="strDays"></span></th>
+									<th><span class="strLocation"></span></th>
+									<th><span class="strTime"></span></th>
+									<th><span class="strExam"></span></th>
+								</tr>
+							</thead>
+							{{#each schedules}}
+								<tr>
+									<td>{{days}}</td>
+									<td>{{buildingCode}} {{roomNumber}}</td>
+									<td><span class="strStart"></span>{{startTime}} <span class="strEnd"></span>{{endTime}}</td>
+									<td>{{exam}}</td>
+								</tr>
+							{{/each}}
+							</table>
+						</div>
+					</li>
+				{{/each}}
+				</ul>
+			</div>
+		</script>
+
+		<script type="text/template7" id="ProfListScript">
+			<div class="list-block media-list" style="display: block;">
+				<ul>
+				{{#each this}}
+					<li>
+						<a href="ratemyprofdetail.html?id={{id}}" data-contextName="profs.{{@index}}" class="item-content item-link" >
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title-row">
+										<div id="profTitle" class="item-title">{{professor}}</div>
+									</div>
+									<div class="item-subtitle">{{department}}</div>
+								</div>
+							</div>
+						</a>
+					</li>
+				{{/each}}
+				</ul>
+			</div>
+		</script>
+
+		<script type="text/template7" id="ProgramListScript">
+			<div class="list-block media-list" style="display: block;">
+				<ul>
+				{{#each this}}
+					<li>
+						<a href="programintrodetail.html?id={{id}}" data-contextName="programs.{{@index}}" class="item-content item-link" >
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title-row">
+										<div id="programTitle" class="item-title">{{program_name}}</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+				{{/each}}
+				</ul>
+			</div>
+		</script>
+
+		<script type="text/template7" id="newsListScript">
+			<div class="list-block media-list" style="display: block;">
+				<ul>
+				{{#each this}}
+					<li>
+						<a href="newsdetail.html?url={{url}}" class="item-link item-content">
+							<div class="item-media"><img src="{{image}}"  style="width:64px"/></div>
+							<div class="item-inner">
+								<div class="item-text">{{description}}</div>
+							</div>
+						</a>
+					</li>
+				{{/each}}
+				</ul>
+
+			</div>
+		</script>
+
+		<script type="text/template7" id="transitListScript">
+			<div class="list-block media-list" style="display: block;">
+			{{#each this}}
+				<ul>
+					<li class="list-group-title" style="color:black">{{routeno}}</li>
+					{{#each schedules}}
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+							{{#if @first}}
+								<div class="item-title" style="color:gray">Next Bus: </div>
+							{{else}}
+								<div class="item-title" style="color:gray">Following Bus: </div>
+							{{/if}}
+								<div class="item-after" style="color:black">{{expectedleavetime}}</div>
+							</div>
+						</div>
+					</li>
+					{{/each}}
+				</ul>
+			{{/each}}
+			</div>
+		</script>
+
+		<script type="text/template7" id="BookListScript">
+			<div class="list-block media-list" style="display: block;">
+				<ul>
+				{{#each this}}
+					<li>
+						<a href="bookdetail.html?id={{ID}}" data-contextName="books.{{@index}}" class="item-content item-link" >
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title-row">
+										<div id="bookName" class="item-title">{{Name}}</div>
+									</div>
+									<div class="item-subtitle">Author: {{Author}}</div>
+								</div>
+							</div>
+						</a>
+					</li>
+				{{/each}}
+				</ul>
+			</div>
+		</script>
+
+		<script type="text/template7" id="TutorListScript">
+			<div class="list-block media-list" style="display: block;">
+				<ul>
+				{{#each this}}
+					<li>
+						<a href="tutordetail.html?id={{ID}}" data-contextName="tutors.{{@index}}" class="item-content item-link" >
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title-row">
+										<div id="tutorName" class="item-title">{{Course}}</div>
+									</div>
+									<div class="item-subtitle">Tutor: {{Name}}</div>
+								</div>
+							</div>
+						</a>
+					</li>
+				{{/each}}
+				</ul>
+			</div>
+		</script>		
+
+
+		<!-- Path to Framework7 Library JS-->
+<!--
+        <script type="text/javascript" src="../platforms/android/assets/www/cordova.js"></script>
+        <script type="text/javascript" src="../platforms/android/assets/www/cordova_plugins.js"></script>-->
+
+       <!-- <script type="text/javascript" src="../plugins/me.apla.cordova.app-preferences/www/apppreferences.js"></script> -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/apppreferences.js"></script>
+		<script type="text/javascript" src="js/lib/framework7.min.js"></script>
+<!--		<script type="text/javascript" src="js/lib/jquery-2.1.1.min.js"></script> -->
+		<script type="text/javascript" src="js/lib/googlemaps.js"></script>
+		<!-- Path to your app js-->
+		<script type="text/javascript" src="js/hnapi.js"></script>
+		<script type="text/javascript" src="js/init.js"></script>
+		<script type="text/javascript" src="js/stringHelper.js"></script>
+		<script type="text/javascript" src="js/setting.js"></script>
+		<script type="text/javascript" src="js/service.js"></script>
+		<script type="text/javascript" src="js/language.js"></script>
+		<script type="text/javascript" src="js/sfuLogin.js"></script>
+		<script type="text/javascript" src="js/courseschedule.js"></script>
+		<script type="text/javascript" src="js/coursesearchresultsdetail.js"></script>
+		<script type="text/javascript" src="js/coursesearchresults.js"></script>
+		<script type="text/javascript" src="js/coursedetail.js"></script>
+        <script type="text/javascript" src="js/email.js"></script>
+		<script type="text/javascript" src="js/news.js"></script>
+		<script type="text/javascript" src="js/newsdetail.js"></script>
+		<script type="text/javascript" src="js/transit.js"></script>
+		<script type="text/javascript" src="js/transitdetail.js"></script>
+		<script type="text/javascript" src="js/coursesearch.js"></script>
+		<script type="text/javascript" src="js/ratemyprof.js"></script>
+		<script type="text/javascript" src="js/ratemyprofdetail.js"></script>
+		<script type="text/javascript" src="js/programintro.js"></script>
+		<script type="text/javascript" src="js/programintromore.js"></script>
+		<script type="text/javascript" src="js/campusmap.js"></script>
+		<script type="text/javascript" src="js/campusstatus.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	 </body>
+</html>

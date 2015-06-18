@@ -1,0 +1,151 @@
+{
+	"courses": [
+		{
+			"course": {
+			  	"classStat": "asdfa",
+			  	"number": 471,
+			  	"sectionCode": "LEC",
+			  	"name": "CMPT",
+			  	"associatedClass": 1,
+			  	"section": "D100",
+			  	"key": "CMPT471D100",
+			  	"classNumber": "8108",
+			  	"title":"Networking II",
+			  	"schedules": [
+					{
+						"days": "W",
+						"exam": false,
+						"campus": "Burnaby",
+						"roomNumber": "3159",
+						"endDate": "1417420800000",
+						"endTime": "1420",
+						"startTime": "1330",
+						"startDate": "1409641200000",
+						"buildingCode": "AQ"
+					},
+					{
+						"days": "F",
+						"exam": false,
+						"campus": "Burnaby",
+						"roomNumber": "3159",
+						"endDate": "1417420800000",
+						"endTime": "1420",
+						"startTime": "1230",
+						"startDate": "1409641200000",
+						"buildingCode": "AQ"
+					},
+					{
+						"days": "W",
+						"exam": true,
+						"campus": "Burnaby",
+						"roomNumber": "3150",
+						"endDate": "1418198400000",
+						"endTime": "1500",
+						"startTime": "1200",
+						"startDate": "1418198400000",
+						"buildingCode": "AQ"
+					}
+			  	],
+			  	"classType": "e"
+			}
+		},
+		{
+			"course": {
+			  	"classStat": "a",
+			  	"number": 120,
+			  	"sectionCode": "LEC",
+			  	"name": "CMPT",
+			  	"associatedClass": 1,
+			  	"section": "D200",
+			  	"key": "CMPT120D200",
+			  	"classNumber": "8048",
+			  	"title": "Introduction to Computing Science and Programming I",
+			  	"schedules": [
+					{
+						"days": "M",
+						"exam": true,
+						"campus": "Burnaby",
+						"roomNumber": "3181",
+						"endDate": "1418025600000",
+						"endTime": "1830",
+						"startTime": "1530",
+						"startDate": "1418025600000",
+						"buildingCode": "AQ"
+					},
+					{
+						"days": "MWF",
+						"exam": false,
+						"campus": "Burnaby",
+						"roomNumber": "7618",
+						"endDate": "1417420800000",
+						"endTime": "1520",
+						"startTime": "1430",
+						"startDate": "1409641200000",
+						"buildingCode": "EDB"
+					},
+					{
+						"days": "M",
+						"exam": true,
+						"campus": "Burnaby",
+						"roomNumber": "9001",
+						"endDate": "1418025600000",
+						"endTime": "1830",
+						"startTime": "1530",
+						"startDate": "1418025600000",
+						"buildingCode": "SSCC"
+					}
+			  	],
+			  	"classType": "e"
+			}
+		},
+		{
+			"course": {
+			  	"classStat": "asdfa",
+			  	"number": 160,
+			  	"sectionCode": "LEC",
+			  	"name": "CMPT",
+			  	"associatedClass": 1,
+			  	"section": "D100",
+			  	"key": "CMPT160D100",
+			  	"classNumber": "8108",
+			  	"title":"Networking II",
+			  	"schedules": [
+					{
+						"days": "F",
+						"exam": false,
+						"campus": "Burnaby",
+						"roomNumber": "3129",
+						"endDate": "1417420800000",
+						"endTime": "0920",
+						"startTime": "0830",
+						"startDate": "1409641200000",
+						"buildingCode": "AQ"
+					},
+					{
+						"days": "R",
+						"exam": false,
+						"campus": "Burnaby",
+						"roomNumber": "3129",
+						"endDate": "1417420800000",
+						"endTime": "1420",
+						"startTime": "1230",
+						"startDate": "1409641200000",
+						"buildingCode": "AQ"
+					},
+					{
+						"days": "F",
+						"exam": true,
+						"campus": "Burnaby",
+						"roomNumber": "3150",
+						"endDate": "1418198400000",
+						"endTime": "1500",
+						"startTime": "1200",
+						"startDate": "1418198400000",
+						"buildingCode": "AQ"
+					}
+			  	],
+			  	"classType": "e"
+			}
+		}
+	]
+}

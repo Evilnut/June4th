@@ -118,6 +118,10 @@ programIntro.prototype.getProgramList = function (refresh) {
 			// PTR Done
 			sfuExplorer.hidePreloader();
 			sfuExplorer.pullToRefreshDone();
+		}, function (error) {
+    		sfuExplorer.hidePreloader();
+    		alertMsg.render('Failed to load programs','OK')
+			console.log(error);
 		});
 		
 	}

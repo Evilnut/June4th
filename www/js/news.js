@@ -144,6 +144,10 @@ news.prototype.getRandomnNews = function (index) {
 			sfuExplorer.hidePreloader();
 			g_news.updateTNewsList();
 		}
+	},function (error) {
+		sfuExplorer.hidePreloader();
+		alertMsg.render('Failed to load news','OK')
+		console.log(error);
 	});
 }
 

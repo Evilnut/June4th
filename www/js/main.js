@@ -323,10 +323,10 @@ function badge() {
 	 
 	booklist.prototype.getBookList = function (refresh) {
 		var results = refresh ? [] : g_bookList.m_bookList;
-		sfuExplorer.showPreloader('Used Books List: <span class="preloader-progress">0</span>');
 		if (results.length === 0) {
 			// 	$.getJSON(bookListURL, function(data) { 	
-				
+			sfuExplorer.showPreloader('Used Books List: <span class="preloader-progress">0</span>');
+
 	  //               results = data;
 			// 		//console.log(results);
 			// 		//console.log(results.length);

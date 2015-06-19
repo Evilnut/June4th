@@ -209,6 +209,8 @@ transitDetail.prototype.getTransitList = function (refresh) {
                     sfuExplorer.hidePreloader();
                     sfuExplorer.pullToRefreshDone();
                 }, function (error) {
+                	sfuExplorer.hidePreloader();
+                	alertMsg.render('Failed to load transit details','OK')
                     console.log(error);
                 },
                     g_transitDetail.m_stationId);

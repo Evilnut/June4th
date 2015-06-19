@@ -323,6 +323,8 @@ courseSchedule.prototype.courseSearch = function (obj) {
 			sfuExplorer.hidePreloader();
 		}
 	}, function (error) {
+    	sfuExplorer.hidePreloader();
+    	alertMsg.render('Failed to load courses','OK')
 		console.log(error);
 	},
 		currentTerm,

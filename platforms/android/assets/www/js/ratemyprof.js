@@ -139,6 +139,10 @@ rateMyprof.prototype.getProfsList = function (refresh) {
 			// PTR Done
 			sfuExplorer.hidePreloader();
 			sfuExplorer.pullToRefreshDone();
+		}, function (error) {
+    		sfuExplorer.hidePreloader();
+    		alertMsg.render('Failed to load professor list','OK')
+			console.log(error);
 		});
 	}
 	else {

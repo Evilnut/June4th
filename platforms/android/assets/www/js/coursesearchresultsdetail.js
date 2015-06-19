@@ -99,6 +99,8 @@ courseSearchResultsDetail.prototype.update = function (page) {
 		*/
 	},
 		function (error) {
+    		sfuExplorer.hidePreloader();
+    		alertMsg.render('Failed to load course details','OK')
 			console.log(error);
 		},
 		g_courseSearchResultsDetail.m_term,

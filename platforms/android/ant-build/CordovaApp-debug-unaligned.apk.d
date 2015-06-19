@@ -1,4 +1,4 @@
-C:\xampp\htdocs\June4th\platforms\android\ant-build\CordovaApp-debug-unaligned.apk : \
-C:\xampp\htdocs\June4th\platforms\android\ant-build\CordovaApp.ap_ \
-C:\xampp\htdocs\June4th\platforms\android\ant-build\classes.dex \
-C:\xampp\htdocs\June4th\platforms\android\CordovaLib\ant-build\classes.jar \
+C:\Users\Evilnut\Desktop\June4th\platforms\android\ant-build\CordovaApp-debug-unaligned.apk : \
+C:\Users\Evilnut\Desktop\June4th\platforms\android\ant-build\CordovaApp.ap_ \
+C:\Users\Evilnut\Desktop\June4th\platforms\android\ant-build\classes.dex \
+C:\Users\Evilnut\Desktop\June4th\platforms\android\CordovaLib\ant-build\classes.jar \

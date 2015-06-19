@@ -1,13 +1,17 @@
 .pagination {
-  display: inline-block;
+  /*display: inline-block;*/
   border: 1px solid #CDCDCD;
-  border-radius: 3px; }
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px; 
+  width: 100%;}
 
 .pagination a {
   display: block;
   float: left;
-  width: 20px;
-  height: 20px;
+  width: 20%;
+  height: 40px;
   outline: none;
   border-right: 1px solid #CDCDCD;
   border-left: 1px solid #CDCDCD;
@@ -16,7 +20,7 @@
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 32px;
   font-family: Times, 'Times New Roman', Georgia, Palatino;
   /* ATTN: need a better font stack */
   background-color: #f3f3f3;
@@ -48,12 +52,13 @@
   float: left;
   margin: 0;
   padding: 0;
-  width: 120px;
-  height: 20px;
+  width: 60%;
+  height: 40px;
   outline: none;
   border: none;
   vertical-align: middle;
-  text-align: center; }
+  text-align: center;
+  font-size: 25px; }
 
 /* gigantic class for demo purposes */
 .gigantic.pagination {

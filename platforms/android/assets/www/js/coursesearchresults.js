@@ -123,6 +123,8 @@ courseSearchResults.prototype.getCoursesList = function (refresh) {
 
 			},
 			function (error) {
+            	sfuExplorer.hidePreloader();
+            	alertMsg.render('Failed to load courses','OK')
 				console.log(error);
 			},
 					// searching parameters

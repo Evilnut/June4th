@@ -213,6 +213,8 @@ courseDetail.prototype.update = function (page) {
                                 }
                             },
                             function (error) {
+                            	sfuExplorer.hidePreloader();
+                            	alertMsg.render('Failed to load course details','OK')
                                 console.log(error);
                             },
                             g_courseDetail.m_termCode,

@@ -66,7 +66,7 @@
 			}
 			
 			// remove the readonly attribute as JavaScript must be working by now ;-)
-			base.$input.removeAttr('readonly');
+			//base.$input.removeAttr('readonly');
 			
 			// set the initial input value
 			// pass true to prevent paged callback form being fired

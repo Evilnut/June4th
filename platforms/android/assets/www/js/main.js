@@ -324,10 +324,9 @@ function badge() {
 	booklist.prototype.getBookList = function (refresh) {
 		var results = refresh ? [] : g_bookList.m_bookList;
 		if (results.length === 0) {
+			// 	$.getJSON(bookListURL, function(data) { 	
 			sfuExplorer.showPreloader('Used Books List: <span class="preloader-progress">0</span>');
 
-			// 	$.getJSON(bookListURL, function(data) { 	
-				
 	  //               results = data;
 			// 		//console.log(results);
 			// 		//console.log(results.length);
@@ -335,6 +334,13 @@ function badge() {
 
 			// console.log(results);
 			$$('.preloader-progress').text("Loading...");
+			setTimeout(function(){
+				sfuExplorer.hidePreloader();
+				if(results.length < 1){
+					alertMsg.render('Failed to load book list','OK');
+				}
+				console.log("Used book loaded: "+results.length);
+			},5000);
 			results = getJson("http://evilnut.ca/App/APIs/sfu_app/sfuapp/sql/getbookjson.php");
 
 	// var bookArray;
@@ -399,7 +405,13 @@ function badge() {
 			sfuExplorer.showPreloader('Tutor List: <span class="preloader-progress">0</span>');
 			
 			$$('.preloader-progress').text("Loading...");
-
+			setTimeout(function(){
+				sfuExplorer.hidePreloader();
+				if(results.length < 1){
+					alertMsg.render('Failed to load tutor list','OK');
+				}
+				console.log("Used book loaded: "+ results.length);
+			},5000);
 			results = getJson("http://evilnut.ca/App/APIs/sfu_app/sfuapp/sql/gettutorjson.php");
 			
 			// clear search bar

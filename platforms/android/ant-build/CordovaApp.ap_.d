@@ -229,6 +229,7 @@ C:\Users\Evilnut\Desktop\June4th\platforms\android\assets\www\img\index\course_s
 C:\Users\Evilnut\Desktop\June4th\platforms\android\assets\www\img\index\course_search_3.png \
 C:\Users\Evilnut\Desktop\June4th\platforms\android\assets\www\img\index\course_search_4.png \
 C:\Users\Evilnut\Desktop\June4th\platforms\android\assets\www\img\index\course_search_f.png \
+C:\Users\Evilnut\Desktop\June4th\platforms\android\assets\www\img\index\events.png \
 C:\Users\Evilnut\Desktop\June4th\platforms\android\assets\www\img\index\home.png \
 C:\Users\Evilnut\Desktop\June4th\platforms\android\assets\www\img\index\home.svg \
 C:\Users\Evilnut\Desktop\June4th\platforms\android\assets\www\img\index\home_64.png \

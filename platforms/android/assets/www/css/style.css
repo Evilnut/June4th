@@ -1887,6 +1887,10 @@ body.indexBody
   width:250px;
 }
 
+.submitform li{
+	display:inline;
+}
+
 .formButton {
   padding-top: 15px;
   margin-left: auto;

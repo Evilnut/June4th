@@ -66,10 +66,19 @@ Setting.prototype.update = function () {
 
 
 	if (g_sfuLogin.m_isLogin == true) {
+		$$('.name').show();
+		$$('.username').show();
+		$$('.point').show();
         console.log("yaduoddddd Setting init 3");
 		$$('#studentName').html(g_sfuLogin.m_studentName);
         console.log("yaduoddddd Setting init 4");
+		$$('#username').html(g_sfuLogin.m_computerID);
+		console.log("yaduoddddd Setting init 5");
 		$$('#studentID').html(g_sfuLogin.m_studentid);
+		$$('#mybook-link').attr('href','userbooks.html');
+		$$('#mybook-link').show();
+		$$('#mytutor-link').attr('href','usertutors.html');
+		$$('#mytutor-link').show();
 		$$('#loginBtn').html("Logout");
 		$$('#loginBtn').removeClass("color-green open-login-screen").addClass("color-red");
 		$$('#loginBtn').on('click', function () {
@@ -81,8 +90,8 @@ Setting.prototype.update = function () {
 
 
 	}
-
-
+	
+	
 	/*var prefs = plugins.appPreferences;
 
 	prefs.fetch((function(key){

@@ -32,7 +32,7 @@ function onOnline() {
 
 function login() {
 		sfuExplorer.showPreloader('Login SFU: <span class="preloader-progress">0</span> %');
-        console.log("aaaaaaaaaaaaaaaa");
+        console.log("main.js - login");
     	//var prefs =  plugins.appPreferences;
 		var username = $$('.login-screen').find('input[name="username"]').val();
 		console.log(username);
@@ -64,6 +64,11 @@ function login() {
 				prefs.store (prefStoreSuccess, prefFail, PASSWORD, password);
 			};
 
+			console.log(g_sfuLogin.m_computerID);
+			console.log(g_sfuLogin.m_studentid);
+			console.log(g_sfuLogin.m_studentName);		
+
+
 			if (data.courses == "") {
 				data.courses = [];
 			}
@@ -73,6 +78,63 @@ function login() {
 			sfuExplorer.hidePreloader();
 			sfuExplorer.closeModal('.login-screen');
 			mainView.router.refreshPage();
+
+			/*
+			 * 
+			 * When user logs in, verify user database first
+			 * Response with a confirm window to ask for Connect-Ed Sign-up permission if user does not exist
+			 * Write into the database if user allows; otherwise, do nothing
+			 * 
+			 */
+			hnapi.checkUser(function (data) {
+				console.log(data);
+				if(data != "null"){
+					// Do nothing
+					console.log(data);
+					console.log("Database: User exists");
+					var returnData = JSON.parse(data); 
+					g_sfuLogin.m_UID = returnData["UID"];
+					console.log("UID: " +g_sfuLogin.m_UID);
+
+				}
+				else{
+					// Pop up confirm window
+					
+					console.log("Database: User not existed");
+					
+				    sfuExplorer.confirm('Also create a Connect-Ed Login with your computer ID "'+g_sfuLogin.m_computerID+'"?', 'Connect-Ed', 
+						      function () {
+						        //sfuExplorer.alert('You clicked Ok button');
+						        console.log("User agreed to sign up");
+						        
+						        hnapi.connectEdSignup(function (data) {
+						        	console.log(data);
+									var returnData = JSON.parse(data); 
+									g_sfuLogin.m_UID = returnData["UID"];
+									console.log("UID: " +g_sfuLogin.m_UID);
+
+						        	alertMsg.render("Thank you for signing up Connect-Ed!", "Got it");
+								}, function (error) {
+									console.log(error);
+								},
+									g_sfuLogin.m_computerID,
+									g_sfuLogin.m_studentid,
+									g_sfuLogin.m_studentName
+
+								);
+				        
+						      },
+						      function () {
+						    	  // Do nothing
+						        //sfuExplorer.alert('You clicked Cancel button');
+						    	  console.log("User canceled Sign-up");
+						      }
+						    );
+				}
+			},function (error){
+				console.log(error);
+			}, g_sfuLogin.m_computerID);
+
 		}, function (error) {
 			console.log(error);
 		},
@@ -288,9 +350,23 @@ function badge() {
 		     dataType: 'json',
 		     global: false,
 		     async:false,
-		     success: function(data) {
-		         return data;
-		     }
+		     success:function(data){
+					if(data.length < 1){
+						alertMsg.render("No post found.","OK");
+					}
+					else{
+						data.forEach(function (obj, index) {
+							$$('.preloader-progress').text(Math.floor(index / data.length * 100));
+						});
+					}
+					return data;
+				},
+				error:function(error){
+					console.log(error);
+					sfuExplorer.hidePreloader();
+					alertMsg.render("Network error!","OK");
+					return null;
+				}
 		 }).responseText);
 		}
 	/*
@@ -334,34 +410,24 @@ function badge() {
 
 			// console.log(results);
 			$$('.preloader-progress').text("Loading...");
-			setTimeout(function(){
+/*			setTimeout(function(){
 				sfuExplorer.hidePreloader();
 				if(results.length < 1){
 					alertMsg.render('Failed to load book list','OK');
 				}
 				console.log("Used book loaded: "+results.length);
-			},5000);
+			},5000);*/
 			results = getJson("http://evilnut.ca/App/APIs/sfu_app/sfuapp/sql/getbookjson.php");
-
-	// var bookArray;
-//	 		for(var j=0; j<bookArray.length;j++){
-//	 			bookArray[j].forEach( function (obj, i){
-//	 				obj = JSON.parse(obj);
-//	 				results[i] = obj.name;
-//	 				$$('.preloader-progress').text(Math.floor(i / bookArray.length * 100));
-//	 			});
-//	 		};
+			sfuExplorer.hidePreloader();
 			// clear search bar
 			$$('.searchbar-input input')[0].value = '';
 			// Update local storage data
 			g_bookList.m_bookList = results;	
 			g_bookList.m_bookCount = results.length;
-			console.log(g_bookList.m_bookList);
 		
 			//show and update book list
 			g_bookList.updateBookList();
 			// PTR Done
-			sfuExplorer.hidePreloader();
 			sfuExplorer.pullToRefreshDone();
 			
 		}
@@ -405,25 +471,23 @@ function badge() {
 			sfuExplorer.showPreloader('Tutor List: <span class="preloader-progress">0</span>');
 			
 			$$('.preloader-progress').text("Loading...");
-			setTimeout(function(){
+/*			setTimeout(function(){
 				sfuExplorer.hidePreloader();
 				if(results.length < 1){
 					alertMsg.render('Failed to load tutor list','OK');
 				}
 				console.log("Used book loaded: "+ results.length);
-			},5000);
+			},5000);*/
 			results = getJson("http://evilnut.ca/App/APIs/sfu_app/sfuapp/sql/gettutorjson.php");
-			
+			sfuExplorer.hidePreloader();
 			// clear search bar
 			$$('.searchbar-input input')[0].value = '';
 			// Update local storage data
-			console.log("getTutorList");
 			g_tutorList.m_tutorList = results;
 			g_tutorList.m_tutorCount = results.length;
 			//show and update tutor list
 			g_tutorList.updatetutorlist();
 			// PTR Done
-			sfuExplorer.hidePreloader();
 			sfuExplorer.pullToRefreshDone();
 		}
 		else {
@@ -440,6 +504,8 @@ var g_sfuLogin = new sfuLogin();
 var g_rateMyprof = new rateMyprof();
 var g_rateMyprofDetail = new rateMyprofDetail();
 var g_bookList = new booklist();
+var g_mybooklist = new mybooklist();
+var g_mytutorlist = new mytutorlist();
 var g_tutorList = new tutorlist();
 var g_programIntro = new programIntro();
 var g_courseSchedule = new courseSchedule();
@@ -784,6 +850,55 @@ sfuExplorer.onPageAfterAnimation('rateMyProfDetail', function (page) {
 
 
 /**
+* Function   :	onPageInit("booklist")
+*
+* Description:	set up the action sheet for the Upload button on booklist.html
+*
+* Author   :	Stephen
+*
+* Arguments  :	none
+*
+* Returns:   :	none
+*
+* Comments   :	none
+*
+**/
+sfuExplorer.onPageInit('booklist', function (page) {
+	/* action sheet for uploading books, search strBookUpload in booklist.html */
+	$$('#strBookUpload').on('click', function () {
+	    var buttons1 = [
+	        {
+	            text: 'Upload',
+	            onClick: function () {
+					mainView.router.loadPage("createbook.html");   
+				}     
+			},
+	        {
+	            text: 'Edit/Delete',
+	            onClick: function () {
+	            	if (g_sfuLogin.m_isLogin == true){
+	            		mainView.router.loadPage("userbooks.html")
+	            	}else{
+	            		mainView.router.loadPage("searchbook.html");	
+	            	}
+					
+	            }
+	        }
+
+	    ];
+	    var buttons2 = [
+	    	{
+	    		text: 'Cancel',
+	            color: 'red'
+	    	}
+
+	    ];
+	    var groups = [buttons1, buttons2];
+	    sfuExplorer.actions(groups);
+	});  
+});
+
+/**
 * Function   :	onPageAfterAnimation("booklist")
 *
 * Description:	Book List page initialization
@@ -835,6 +950,57 @@ sfuExplorer.onPageAfterAnimation('bookdetail', function (page) {
 });
 
 /**
+* Function   :	onPageInit("tutorlist")
+*
+* Description:	set up the action sheet for POST button on tutorlist.html
+*
+* Author   :	Stephen
+*
+* Arguments  :	none
+*
+* Returns:   :	none
+*
+* Comments   :	none
+*
+**/
+sfuExplorer.onPageInit('tutorlist', function (page) {
+	console.log("tutorlist onPageInit ");
+
+	/* action sheet for posting tutors, search strPost in booklist.html */
+	$$('#strPost').on('click', function () {
+	    var buttons1 = [
+	        {
+	            text: 'Post',
+	            onClick: function () {
+					mainView.router.loadPage("createtutor.html");   
+				}     
+			},
+	        {
+	            text: 'Edit/Delete',
+ 				onClick: function () {
+	            	if (g_sfuLogin.m_isLogin == true){
+	            		mainView.router.loadPage("usertutors.html")
+	            	}else{
+	            		mainView.router.loadPage("searchtutor.html");	
+	            	}
+					
+	            }
+	        }
+
+	    ];
+	    var buttons2 = [
+	    	{
+	    		text: 'Cancel',
+	            color: 'red'
+	    	}
+
+	    ];
+	    var groups = [buttons1, buttons2];
+	    sfuExplorer.actions(groups);
+	});  
+});
+
+/**
 * Function   :	onPageAfterAnimation("tutorlist")
 *
 * Description:	Tutor List page initialization
@@ -883,6 +1049,65 @@ sfuExplorer.onPageAfterAnimation('tutordetail', function (page) {
 	$$(".navbar").removeClass("navbar-extra").removeClass("navbar-extra-courseSchedule");
 	g_stringHelper.updateUI();
 
+});
+
+/**
+* Function   :	onPageAfterAnimation("mybooklist")
+*
+* Description:	My Book List page initialization
+*
+* Author   :	Ray
+*
+* Arguments  :	none
+*
+* Returns:   :	none
+*
+* Comments   :	none
+*
+**/
+sfuExplorer.onPageAfterAnimation('mybooklist', function (page) {
+	//console.log("rateMyProf onPageAfterAnimation ");
+	// page UI inti
+	$$(".navbar").removeClass("navbar-extra").removeClass("navbar-extra-courseSchedule");
+	g_stringHelper.updateUI();
+
+	g_mybooklist.init();
+	g_mybooklist.update();
+
+	// pull to refresh listener
+	$$('#pullToRefreshBook').on('refresh', function () {
+		g_mybooklist.update(true);
+	});
+});
+
+/**
+* Function   :	onPageAfterAnimation("mytutorlist")
+*
+* Description:	My Tutor List page initialization
+*
+* Author   :	Ray
+*
+* Arguments  :	none
+*
+* Returns:   :	none
+*
+* Comments   :	none
+*
+**/
+sfuExplorer.onPageAfterAnimation('mytutorlist', function (page) {
+	//console.log("rateMyProf onPageAfterAnimation ");
+
+	// page UI inti
+	$$(".navbar").removeClass("navbar-extra").removeClass("navbar-extra-courseSchedule");
+	g_stringHelper.updateUI();
+
+	g_mytutorlist.init();
+	g_mytutorlist.update();
+
+	// pull to refresh listener
+	$$('#pullToRefreshTutor').on('refresh', function () {
+		g_mytutorlist.update(true);
+	});
 });
 
 /**

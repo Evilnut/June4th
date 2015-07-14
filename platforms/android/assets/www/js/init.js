@@ -12,7 +12,8 @@ var sfuExplorer = new Framework7({
 	init: false, //Manual initialization
 	animateNavBackIcon: true,
 	precompileTemplates: true,
-	template7Pages: true
+	template7Pages: true,
+	uniqueHistory:true
 });
 
 // Export selectors engine

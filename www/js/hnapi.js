@@ -29,6 +29,12 @@
 	var newsLibraryURL = ["http://api.lib.sfu.ca/librarynews/frontpage/next?category=bennett&id="];
 	/*var sfuLoginURL = ["http://roywang.net/evilnut/sfuapp/sfu-login.php"];*/
     var sfuLoginURL = ["http://evilnut.ca/App/APIs/sfu_app/sfuapp/sfu-login.php"];
+    var checkUserURL = ["http://evilnut.ca/App/APIs/sfu_app/sfuapp/sql/checkuser1.php"];
+    var connectEdSignupURL = ["http://evilnut.ca/App/APIs/sfu_app/sfuapp/sql/adduser.php"];
+    var deleteTutorURL = ["http://evilnut.ca/App/APIs/sfu_app/sfuapp/sql/deletetutor.php"];
+	var deleteBookURL = ["http://evilnut.ca/App/APIs/sfu_app/sfuapp/sql/deletebook.php"];
+    var userBooksURL =["http://evilnut.ca/App/APIs/sfu_app/sfuapp/sql/loadmybooks.php"];
+    var userBooksJsonURL = ["http://www.evilnut.ca/App/APIs/sfu_app/sfuapp/sql/mybooks.json"];
 
 	/**
 	* Description:	HTTP request function define	  
@@ -45,6 +51,7 @@
 			url: path[index],
 			success: success,
 			error: function (xhr) {
+				console.log("http request error");
 				if (retry < path.length - 1) {
 					httpReq(path, success, error, retry += 1);
 				} else {
@@ -76,6 +83,80 @@
 		retry = retry || 0;
 		return $$.ajax({
 			url: path[index] + "?username=" + username + "&password=" + password,
+			success: success,
+			error: function (xhr) {
+				if (retry < path.length - 1) {
+					httpReq(path, success, error, retry += 1);
+				} else {
+					error(xhr);
+				}
+			}
+		});
+	};
+	
+	var checkUserReq = function (path, username, index, success, error, retry) {
+		console.log(path[index]);
+		retry = retry || 0;
+		return $$.ajax({
+			url: path[index],
+			method: "POST",
+			data: "username=" + username,
+			success: success,
+			error: function (xhr) {
+				if (retry < path.length - 1) {
+					httpReq(path, success, error, retry += 1);
+				} else {
+					error(xhr);
+				}
+			}
+		});
+	};
+
+	var signupReq = function (path, username, studentID, studentName, index, success, error, retry) {
+		console.log(path[index]);
+		retry = retry || 0;
+		return $$.ajax({
+			url: path[index],
+			method: "POST",
+			data: "username=" + username + "&studentID=" + studentID + "&studentName=" + studentName,
+			success: success,
+			error: function (xhr) {
+				if (retry < path.length - 1) {
+					httpReq(path, success, error, retry += 1);
+				} else {
+					error(xhr);
+				}
+			}
+		});
+	};
+
+	var deleteTutorReq = function (path, TID, index, success, error, retry) {
+		console.log(path[index]);
+		console.log("TID="+TID);
+		retry = retry || 0;
+		return $$.ajax({
+			url: path[index],
+			method: "POST",
+			data: "TID=" + TID,
+			success: success,
+			error: function (xhr) {
+				if (retry < path.length - 1) {
+					httpReq(path, success, error, retry += 1);
+				} else {
+					error(xhr);
+				}
+			}
+		});
+	};
+
+	var deleteBookReq = function (path, BID, index, success, error, retry) {
+		console.log(path[index]);
+		console.log(BID);
+		retry = retry || 0;
+		return $$.ajax({
+			url: path[index],
+			method: "POST",
+			data: "BID=" + BID,
 			success: success,
 			error: function (xhr) {
 				if (retry < path.length - 1) {
@@ -170,7 +251,30 @@
 			error: error
 		});
 	}
-	
+
+	var userBooksReq = function (path, index, userID, success, error, retry) {
+		console.log(path[index]);
+		retry = retry || 0;
+		$$.ajax({
+			url: path[index],
+			method: "POST",
+			data: "userID=" + userID,
+			success: function(success, error){
+				return httpReq(userBooksJsonURL, 0, success, error);
+			},
+			error: function (xhr) {
+				console.log("error");
+/*				if (retry < path.length - 1) {
+					httpReq(path, success, error, retry += 1);
+				} else {
+					error(xhr);
+				}*/
+			}
+		});
+	};
+
+
+
 	/**
 	* Description:	interface defined	  
 	*
@@ -180,6 +284,22 @@
 	* 
 	**/
 	var hnapi = {
+
+		deleteBook: function (success, error, BID){
+			return deleteBookReq(deleteBookURL, BID, 0, success, error);
+		},
+
+		deleteTutor: function (success, error, TID){
+			return deleteTutorReq(deleteTutorURL, TID, 0, success, error);
+		},
+
+		checkUser: function (success, error, username){
+			return checkUserReq(checkUserURL, username, 0, success, error);
+		},
+			
+		connectEdSignup: function (success, error, username, studentID, studentName) {
+			return signupReq(connectEdSignupURL, username, studentID, studentName, 0, success, error);
+		},
 
 		sfuLogin: function (success, error, username, password) {
 			return loginReq(sfuLoginURL, username, password, 0, success, error);
@@ -236,6 +356,10 @@
 		
 		getTansitSchedule: function (success, error, stationID) {
 			return transitReq(transitURL, 0, stationID, success, error);
+		},
+		
+		getUserBookList: function (success, error, userID) {
+			return userBooksReq(userBooksURL, 0, userID, success, error);
 		}
 	};
 

@@ -92,7 +92,8 @@ function searchTutor(){
 						$( "input[name=tutorCourse]").val(returnData["Course"]);
 						$( "textarea[name=tutorDesc]").val(returnData["Description"]);  
 						$( "input[name=telephone]").val(returnData["Telephone"]);
-						$( "input[name=email]").val(returnData["Email"]);                          
+						$( "input[name=email]").val(returnData["Email"]);
+						$( "input[name=TID]").val(returnData["ID"]); 	                          
 
 					});
 					

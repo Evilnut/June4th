@@ -125,6 +125,7 @@ function submitTutorForm(){
                 //call the custom alert message function
                 //alertMsg.render("Your submission was succesful!  Tutor ID: " + ID + " EditKey: "+ EditKey,'OK');  
                 sfuExplorer.alert("Your submission was succesful! Tutor ID: " + ID + " EditKey: "+ EditKey,'SFU Exploerer');
+                mainView.router.back();
             });
 
 

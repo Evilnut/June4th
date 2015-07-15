@@ -79,6 +79,7 @@ var AJAXSubmit = (function () {
     $( "input[name=email]").val(""); 
 
     sfuExplorer.alert("Your submission was succesful! Book ID: " + ID + " EditKey: "+ EditKey,'SFU Exploerer');
+    mainView.router.back();
     //alertMsg.render('Submitted','OK');
   }
 

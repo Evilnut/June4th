@@ -97,7 +97,7 @@ function searchBook(){
 						$( "input[name=CurrentPrice]").val(returnData["CurrentPrice"]);
 						$( "input[name=telephone]").val(returnData["Telephone"]);
 						$( "input[name=email]").val(returnData["Email"]);                          
-
+						$( "input[name=BID]").val(returnData["ID"]); 
 					});
 					
 					mainView.router.loadPage("editbook.html");

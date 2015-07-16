@@ -5,7 +5,7 @@ function submitTutorForm(){
      $( document ).ready( function() {
 
 
-        console.log("submitTutorForm"); 
+        console.log("submitTutorForm.."); 
 
         /* attach a submit handler to the form */
         $(document).on("submit","#uploadTutor",function(event){
@@ -80,13 +80,15 @@ function submitTutorForm(){
             var $inputs = $form.find("input, select, button, textarea");
 
             // Serialize the data in the form
-            var serializedData = $form.serialize();                     
-
+            var serializedData = $form.serialize();  
+            serializedData = serializedData+"&userID="+g_sfuLogin.m_UID;
+                 
+            console.log(serializedData);
             // Let's disable the inputs for the duration of the Ajax request.
             // Note: we disable elements AFTER the form data has been serialized.
             // Disabled form elements will not be serialized.
             $inputs.prop("disabled", true);   
-            
+  
 
 
             /* Send the data using ajax */
@@ -111,11 +113,19 @@ function submitTutorForm(){
         
 
                 $( "#tutorReturnID" ).html(ID);
-                $( "#tutorEditKey" ).html(EditKey);      
+                $( "#tutorEditKey" ).html(EditKey);  
+
+                /* empty all the input field */  
+                $( "input[name=tutorName]").val("");
+                $( "input[name=tutorCourse]").val("");
+                $( "input[name=email]").val("");
+                $( "input[name=telephone]").val(""); 
+                $( "textarea[name=tutorDesc]").val("");                       
 
                 //call the custom alert message function
-                alertMsg.render('Submitted','OK');  
-                //sfuExplorer.alert('Submitted','SFU Exploerer');
+                //alertMsg.render("Your submission was succesful!  Tutor ID: " + ID + " EditKey: "+ EditKey,'OK');  
+                sfuExplorer.alert("Your submission was succesful! Tutor ID: " + ID + " EditKey: "+ EditKey,'SFU Exploerer');
+                mainView.router.back();
             });
 
 

@@ -17,11 +17,11 @@
 	<!---->
 	<script type="text/javascript" src="js/lib/jquery-2.1.1.min.js"></script>
 
-		<script type="text/javascript" src="js/alertmsg.js"></script>
-		<script type="text/javascript" src="js/createtutor.js"></script>
-		<script type="text/javascript" src="js/createbook.js"></script>		
+
 	<!--	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>-->
         <script type="text/javascript" src="js/menubar.js"></script>
+		<script type="text/javascript" src="js/userbooklist.js"></script>
+		<script type="text/javascript" src="js/usertutorlist.js"></script>
 
 
     <!-- jqPagination styles 
@@ -222,7 +222,7 @@
 						<div id="dialogboxfoot"></div>
 					</div>
 				</div>
-
+				
 				<!--Bottom Toolbar  -->
 				<div class="toolbar tabbar-labels">
 					<div class="toolbar-inner">
@@ -486,6 +486,7 @@
 								<div class="item-inner">
 									<div class="item-title-row">
 										<div id="bookName" class="item-title">{{Name}}</div>
+										<div id="postDate" class="item-date">Posted:</div>
 									</div>
 									<div class="item-subtitle">Author: {{Author}}</div>
 								</div>
@@ -516,8 +517,51 @@
 				{{/each}}
 				</ul>
 			</div>
-		</script>		
+		</script>	
+		
+		<script type="text/template7" id="MyBookListScript">
+			<div class="list-block media-list" style="display: block;">
+				<ul>
+				{{#each this}}
+					<li>
+						<a href="editbook.html?id={{ID}}" data-contextName="mybooks.{{@index}}" class="item-content item-link" >
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title-row">
+										<div id="myBookName" class="item-title">{{Name}}</div>
+										<div id="postDate" class="item-date">Posted:</div>
+									</div>
+									<div class="item-subtitle">Author: {{Author}}</div>
+								</div>
+							</div>
+						</a>
+					</li>
+				{{/each}}
+				</ul>
+			</div>
+		</script>	
 
+		<script type="text/template7" id="MyTutorListScript">
+			<div class="list-block media-list" style="display: block;">
+				<ul>
+				{{#each this}}
+					<li>
+						<a href="edittutor.html?id={{ID}}" data-contextName="mytutors.{{@index}}" class="item-content item-link" >
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title-row">
+										<div id="myTutorial" class="item-title">{{Course}}</div>
+										<div id="postDate" class="item-date">Posted:</div>
+									</div>
+									<div class="item-subtitle">Tutor: {{Name}}</div>
+								</div>
+							</div>
+						</a>
+					</li>
+				{{/each}}
+				</ul>
+			</div>
+		</script>
 
 		<!-- Path to Framework7 Library JS-->
 <!--
@@ -535,6 +579,14 @@
 		<script type="text/javascript" src="js/init.js"></script>
 		<script type="text/javascript" src="js/stringHelper.js"></script>
 		<script type="text/javascript" src="js/setting.js"></script>
+		<script type="text/javascript" src="js/alertmsg.js"></script>
+		<script type="text/javascript" src="js/createtutor.js"></script>
+		<script type="text/javascript" src="js/createbook.js"></script>	
+		<script type="text/javascript" src="js/editbook.js"></script>
+		<script type="text/javascript" src="js/edittutor.js"></script>
+		<script type="text/javascript" src="js/searchbook.js"></script>
+		<script type="text/javascript" src="js/searchtutor.js"></script>
+
 		<script type="text/javascript" src="js/service.js"></script>
 		<script type="text/javascript" src="js/language.js"></script>
 		<script type="text/javascript" src="js/sfuLogin.js"></script>
@@ -555,5 +607,6 @@
 		<script type="text/javascript" src="js/campusmap.js"></script>
 		<script type="text/javascript" src="js/campusstatus.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
+
 	 </body>
 </html>

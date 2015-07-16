@@ -26,5 +26,6 @@ function sfuLogin() {
 	this.m_studentid = "";
 	this.m_computerID = "";
   this.m_password = "";
+  this.m_UID ="";
 }
 

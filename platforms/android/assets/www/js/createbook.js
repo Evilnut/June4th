@@ -46,11 +46,11 @@ var AJAXSubmit = (function () {
     /* console.log("AJAXSubmit - Success!"); */
     //alert(this.responseText);
     /* you can get the serialized data through the "submittedData" custom property: */
-    /* alert(JSON.stringify(this.submittedData)); */
+    // alert(JSON.stringify(this.submittedData)); 
 
 
     /* display the return ID and editkey of the uploadBook post */
-    var returnData = JSON.parse(this.responseText); //returns an array of Json object
+    var returnData = JSON.parse(this.responseText); //returns an array of JSON object
     console.log (returnData);
 
     var response = returnData[0];
@@ -67,8 +67,20 @@ var AJAXSubmit = (function () {
     $( "#tutorReturnID" ).html(ID);
     $( "#tutorEditKey" ).html(EditKey); 
 
-    //sfuExplorer.alert('Submitted','SFU Exploerer');
-    alertMsg.render('Submitted','OK');
+    /* empty all the input field except the hidden username input*/    
+    $( "input[name=bookName]").val("");
+    $( "input[name=bookAuthor]").val("");
+    $( "input[name=seller]").val("");
+    $( "input[name=bookEdition]").val(""); 
+    $( "textarea[name=bookDesc]").val("");  
+    $( "input[name=OriginalPrice]").val("");
+    $( "input[name=CurrentPrice]").val("");
+    $( "input[name=telephone]").val("");
+    $( "input[name=email]").val(""); 
+
+    sfuExplorer.alert("Your submission was succesful! Book ID: " + ID + " EditKey: "+ EditKey,'SFU Exploerer');
+    mainView.router.back();
+    //alertMsg.render('Submitted','OK');
   }
 
   function submitData (oData) {
@@ -171,9 +183,8 @@ var AJAXSubmit = (function () {
 
 
 function submitBookForm(){
-    console.log("submitBookForm");
+    console.log("submitBookForm..");
 
-    console.log("validating bookform...");
     /* validate the form */
     var bookName = (document.forms["uploadBook"]["bookName"].value).trim();
     if (bookName == null || bookName == "") {
@@ -240,7 +251,8 @@ function submitBookForm(){
         return false;
     }
 
-
+  /* set the value for UserName hidden input.  Used for createbook1.php to update user table*/
+    $( "#bookUserID" ).val(g_sfuLogin.m_UID);  
 
 
 

@@ -284,10 +284,28 @@ i.icon.icon-loncapa{
   background-image: url("../img/loncapa.png");
 }
 
+#studentName, #username, #studentID{
+	color: black;
+}
 
+.strName, .strUsername, .strStudentNum{
+	font-size:90%;
+}
 
 .spring {
     background: url("../img/sprite@2x.png") no-repeat scroll 0 0 / 200% auto rgba(0, 0, 0, 0);
+}
+
+.aboutPic {
+	background: url("../img/about.png");
+}
+
+.mytutor {
+	background: url("../img/tutor.png");
+}
+
+.mybook {
+	background: url("../img/book.png");
 }
 
 /*================================= index page =================================*/
@@ -564,8 +582,8 @@ row
 }
 
 .setting-page .user-info .avatar, .setting-page .user-info .avatar > img {
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
 }
 
 .setting-page .user-detail {
@@ -597,12 +615,10 @@ row
 } 
 
 .setting-page .account {
-    background-color: #5999f3;
     background-position: 0 0;
 }
 
 .setting-page .about {
-    background-color: #5999f3;
     background-position: -30px 0;
 }
 /*================================= course detail page =================================*/
@@ -878,89 +894,16 @@ i.icon {
 }
 
 
-/*================================= Program Intro ===================================*/
-/*Programs list*/
-#programSearchList {
-    margin: 0;
+/*================================= Events ===================================*/
+.events{
+	width:80%;
+	border-right:1px solid #eee;
+	border-left:1px solid #eee;
 }
 
-#programSearchList .list-block {
-    font-size: 17px;
-    margin: 0;
+.events-page{
+	width:90%;
 }
-
-.programs-list ul {
-    border: medium none;
-}
-
-.programs-list .list-block .item-content {
-    padding-left: 5px;
-    width: 100%;
-}
-
-/*Programs detail view*/
-.program-header {
-    background: none repeat 0 0 #fff;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    height: 90px;
-    padding: 20px 15px;
-    position: relative;
-    z-index: 10;
-}
-
-.program-title {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 22px;
-    margin-bottom: 5px;
-    max-height: 44px;
-    overflow: hidden;
-    position: relative;
-    text-overflow: ellipsis;
-}
-
-.program-info {
-    color: #8e8e93;
-}
-
-.program-comments {
-    box-sizing: border-box;
-    height: calc(100% - 90px);
-    overflow: auto;
-    position: relative;
-}
-
-.program-comments .messages {
-    padding-bottom: 20px;
-}
-
-
-.program-comments .message {
-    max-width: 95%;
-}
-
-.program-comments .message-name {
-	text-align:center;
-	margin-bottom:10px;
-}
-
-.program-comments .message-name .comment-name {
-    color: #333;
-    font-size: 17px;
-}
-
-.program-comments .message-text {
-    background: none repeat scroll 0 0 #fff;
-    color: #000;
-    font-size: 14px;
-    line-height: 1.3;
-}
-
-.program-comments .message-received.message-last .message-text, .message-received.message-with-tail .message-text {
-    border-radius: 16px 16px 16px 16px;
-}
-
 
 /*==================================== Course Scedule ===============================*/
 /*courseSchedule header*/

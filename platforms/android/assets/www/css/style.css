@@ -472,9 +472,20 @@ a {
 
 row
 
+/*================================= account page =================================*/
+.account-page li {
+	position: relative;
+}
 
-
-
+.setting-page .account-user {
+	background: none repeat scroll 0 0 #fff;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	min-height: 150px;
+	padding-left: 5%;
+	padding-right: 5%
+}
 
 /*================================= setting page =================================*/
 .setting-page.list-block, .item-detail {
@@ -486,7 +497,22 @@ row
     position: relative;
 }
 
-.setting-page.list-block .item-content {
+.setting-page .account-user {
+	background: none repeat scroll 0 0 #fff;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	min-height: 120px;
+	padding-left: 5%;
+	padding-right: 5%
+}
+
+.setting-page .name, .setting-page .username, .setting-page .point {
+	margin-bottom: 15px;
+	display: none;
+}
+
+.setting-page.list-block .item-content, .setting-page.list-block .account-user {
     align-items: center;
     box-sizing: border-box;
     display: flex;
@@ -495,7 +521,7 @@ row
     padding-left: 15px;
 }
 
-.setting-page .item-content {
+.setting-page .item-content, .setting-page .account-user {
     background: none repeat scroll 0 0 #ffffff;
     border: 1px solid #ebe9e9;
     box-shadow: none;
@@ -538,8 +564,8 @@ row
 }
 
 .setting-page .user-info .avatar, .setting-page .user-info .avatar > img {
-    height: 55px;
-    width: 55px;
+    height: 100px;
+    width: 100px;
 }
 
 .setting-page .user-detail {
@@ -566,8 +592,13 @@ row
     background-position: 0 -30px;
 }
 
-.setting-page .language {
-    background-color: #9b59b6;
+ .setting-page #mybook-link, .setting-page #mytutor-link {
+	display:none;
+} 
+
+.setting-page .account {
+    background-color: #5999f3;
+    background-position: 0 0;
 }
 
 .setting-page .about {
@@ -1061,9 +1092,52 @@ td {
 	width: 10%;
 }
 
-/*==================================== Course Scedule Detail ===============================*/
+/*==================================== User Book List Detail ===============================*/
+
+#userBookSearch {
+    margin: 0;
+}
+
+#userBookSearch .list-block {
+    font-size: 17px;
+    margin: 0;
+}
 
 
+.user-books-list ul {
+    border: medium none;
+}
+
+.user-books-list .list-block .item-content {
+    padding-left: 5px;
+    width: 100%;
+}
+
+.user-books-list .item-media {
+    padding-bottom: 8px !important;
+    padding-top: 7px !important;
+}
+
+.user-books-list .item-media img {
+    border-radius: 24px;
+    height: 48px;
+    width: 48px;
+}
+
+.user-books-list .item-title {
+    color: #000;
+}
+
+.user-books-list .item-date {
+	color: #777777;
+	font-size: 10px;
+	padding-right: 5px;
+}
+
+.user-books-list .item-subtitle {
+    color: #777777;
+    font-size: 13px;
+}
 
 /*================================= Used Book List ===================================*/
 /*books list*/
@@ -1099,6 +1173,12 @@ td {
 
 .books-list .item-title {
     color: #000;
+}
+
+.books-list .item-date {
+	color: #777777;
+	font-size: 10px;
+	padding-right: 5px;
 }
 
 .books-list .item-subtitle {
@@ -1909,6 +1989,14 @@ body.indexBody
 	color:#fff;
 }
 
+.formButton .deleteButton #deleteBtn{
+	background-color:#f55a4e;
+	width:100%;
+	height:36px;
+	border:none;
+	color:#fff;
+}
+
 .secondaryBtn {
 	padding-top:10px;
 	text-align:center;
@@ -1944,3 +2032,4 @@ body.indexBody
 #dialogbox > div{ background:#FFF; margin:8px; }
 #dialogbox > div > #dialogboxbody{ padding:30px; color:#000; }
 #dialogbox > div > #dialogboxfoot{ padding:10px; text-align:center; }
+

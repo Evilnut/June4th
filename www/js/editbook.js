@@ -111,7 +111,10 @@ function deleteBookForm(){
                 //call the custom alert message function
                 //alertMsg.render("Your submission was succesful!  Tutor ID: " + ID + " EditKey: "+ EditKey,'OK');  
                 sfuExplorer.alert("Your book post is successfully deleted",'SFU Explorer');
+                g_bookList.update(true);
+                g_mybooklist.update(true);
                 mainView.router.back();
+
             }, function (error) {
                 console.log(error);
             },

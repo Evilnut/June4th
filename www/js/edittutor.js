@@ -119,7 +119,10 @@ function editTutorForm(){
 
                 //call the custom alert message function
                 //alertMsg.render("Your submission was succesful!  Tutor ID: " + ID + " EditKey: "+ EditKey,'OK');  
+                g_mytutorlist.update(true);
+                g_tutorList.update(true);
                 sfuExplorer.alert("Your edit submission was succesful!",'SFU Exploerer');
+                
                 mainView.router.back();
             });
 
@@ -177,6 +180,9 @@ function deleteTutorForm(){
                 //call the custom alert message function
                 //alertMsg.render("Your submission was succesful!  Tutor ID: " + ID + " EditKey: "+ EditKey,'OK');  
                 sfuExplorer.alert("Your tutor post is successfully deleted",'SFU Explorer');
+                g_mytutorlist.update(true);
+                g_tutorList.update(true);
+                mainView.router.back();
 
             }, function (error) {
                 console.log(error);
@@ -186,7 +192,6 @@ function deleteTutorForm(){
 
             );
 
-            mainView.router.back();
         },
         function () {
             //Cancel button clicked
